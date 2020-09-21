@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassFigure</name>
+    </assembly>
+    <members>
+        <member name="T:Lab1.BelongingOfPoint">
+            <summary>
+            Класс содержащий метод проверяющий принадлежность точки
+            </summary>
+        </member>
+        <member name="M:Lab1.BelongingOfPoint.CheckBelonging(Lab1.Figure)">
+            <summary>
+            Проверка принадлежности точки и возвращение сообщения
+            </summary>
+            <param name="square">
+            Экземпляр класса Figure
+            </param>
+        </member>
+        <member name="T:Lab1.Figure">
+            <summary>
+            Класс представляющий собой плоскую фигуру
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.Perimeter">
+            <summary>
+            Периметр фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.Area">
+            <summary>
+            Площадь фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.LengthSide">
+            <summary>
+            Длина стороны фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.FirstPointX">
+            <summary>
+            X-координата первой вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.FirstPointY">
+            <summary>
+            Y-координата первой вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.SecondPointX">
+            <summary>
+            X-координата второй вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.SecondPointY">
+            <summary>
+            X-координата второй вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.ThirdPointX">
+            <summary>
+            X-координата третьей вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.ThirdPointY">
+            <summary>
+            Y-координата третьей вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.FourthPointX">
+            <summary>
+            X-координата четвертой вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.FourthPointY">
+            <summary>
+            Y-координата четвертой вершины фигуры
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.FigureValid">
+            <summary>
+            Существует ли фигура
+            </summary>
+        </member>
+        <member name="P:Lab1.Figure.FigureExistence">
+            <summary>
+            Создана ли фигура
+            </summary>
+        </member>
+        <member name="M:Lab1.Figure.CalculateSides">
+            <summary>
+            Метод вычисляющий значение длины стороны
+            </summary>
+        </member>
+        <member name="M:Lab1.Figure.CalculateArea">
+            <summary>
+            Метод вычисляющий площадь фигуры
+            </summary>
+        </member>
+        <member name="M:Lab1.Figure.CalculatePerimeter">
+            <summary>
+            Метод вычисляющий периметр фигуры
+            </summary>
+        </member>
+        <member name="M:Lab1.Figure.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Инициализирует новый экземпляр класса
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="x3"></param>
+            <param name="y3"></param>
+            <param name="x4"></param>
+            <param name="y4"></param>
+        </member>
+        <member name="M:Lab1.Figure.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса
+            </summary>
+        </member>
+        <member name="T:Lab1.FigureValidator">
+            <summary>
+            Класс содержащий метод проверки возможности существования фигуры
+            </summary>
+        </member>
+        <member name="M:Lab1.FigureValidator.ValidateFigure(Lab1.Figure)">
+            <summary>
+            Проверка возможности существования фигуры
+            </summary>
+            <param name="Square"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lab1.Point">
+            <summary>
+            Структура хранящая значения координат точки и их суммы по модулю
+            </summary>
+        </member>
+        <member name="F:Lab1.Point.X">
+            <summary>
+            Значение X-координаты точки
+            </summary>
+        </member>
+        <member name="F:Lab1.Point.Y">
+            <summary>
+            Значение Y-координаты точки
+            </summary>
+        </member>
+        <member name="F:Lab1.Point.SumCoordinate">
+            <summary>
+            Сумма X и Y координат точки по модулю
+            </summary>
+        </member>
+        <member name="M:Lab1.Point.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Инициализирует экземпляр структуры
+            </summary>
+            <param name="X"></param>
+            <param name="Y"></param>
+            <param name="SumCoordinate"></param>
+        </member>
+    </members>
+</doc>

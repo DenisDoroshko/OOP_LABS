@@ -1,0 +1,11 @@
+D:\Project1\ConsoleMenu\bin\Release\ConsoleMenu.exe.config
+D:\Project1\ConsoleMenu\bin\Release\ConsoleMenu.exe
+D:\Project1\ConsoleMenu\bin\Release\ConsoleMenu.pdb
+D:\Project1\ConsoleMenu\bin\Release\ClassFigure.dll
+D:\Project1\ConsoleMenu\bin\Release\ClassFigure.pdb
+D:\Project1\ConsoleMenu\bin\Release\ClassFigure.dll.config
+D:\Project1\ConsoleMenu\obj\Release\ConsoleApplication.csprojAssemblyReference.cache
+D:\Project1\ConsoleMenu\obj\Release\ConsoleApplication.csproj.CoreCompileInputs.cache
+D:\Project1\ConsoleMenu\obj\Release\ConsoleApplication.csproj.CopyComplete
+D:\Project1\ConsoleMenu\obj\Release\ConsoleMenu.exe
+D:\Project1\ConsoleMenu\obj\Release\ConsoleMenu.pdb

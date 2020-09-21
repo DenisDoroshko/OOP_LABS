@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleMenu</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleMenu.InteractionWithUser">
+            <summary>
+            Класс содержащий методы для взаимодействия с пользователем и выполнения операций над фигурой 
+            </summary>
+        </member>
+        <member name="M:ConsoleMenu.InteractionWithUser.CreateFigure">
+            <summary>
+            Метод создающий плоскую фигуру по 4 её вершинам
+            </summary>
+            <returns>Экземпляр фигуры</returns>
+        </member>
+        <member name="M:ConsoleMenu.InteractionWithUser.CheckExsisting(Lab1.Figure)">
+            <summary>
+            Метод выполняющий проверку возможности существования фигуры
+            </summary>
+            <param name="Square"></param>
+        </member>
+        <member name="M:ConsoleMenu.InteractionWithUser.Calculate(Lab1.Figure)">
+            <summary>
+            Метод вычисляющий выбранный пользователем параметр фигуры
+            </summary>
+            <param name="Square"></param>
+        </member>
+        <member name="M:ConsoleMenu.InteractionWithUser.ShowBelonging(Lab1.Figure)">
+            <summary>
+            Метод выводящий принадлежность выбранной точки относительно фигуры
+            </summary>
+            <param name="Square"></param>
+        </member>
+        <member name="T:ConsoleMenu.MenuOfApplication">
+            <summary>
+            Класс предоставляющий интерфейс пользователя
+            </summary>
+        </member>
+        <member name="M:ConsoleMenu.MenuOfApplication.ShowMenu">
+            <summary>
+            Метод выполняющий определенные действия в соответствии с выбором пользователя
+            </summary>
+        </member>
+        <member name="M:ConsoleMenu.MenuOfApplication.MakeChoice">
+            <summary>
+            Метод предлагающий пользователю сделать выбор
+            </summary>
+            <returns>Номер выбранного пункта меню</returns>
+        </member>
+    </members>
+</doc>

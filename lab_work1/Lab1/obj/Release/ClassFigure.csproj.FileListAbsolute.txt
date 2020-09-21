@@ -1,0 +1,7 @@
+D:\Project1\Lab1\bin\Release\ClassFigure.dll.config
+D:\Project1\Lab1\bin\Release\ClassFigure.dll
+D:\Project1\Lab1\bin\Release\ClassFigure.pdb
+D:\Project1\Lab1\obj\Release\ClassFigure.csproj.CoreCompileInputs.cache
+D:\Project1\Lab1\obj\Release\ClassFigure.dll
+D:\Project1\Lab1\obj\Release\ClassFigure.pdb
+D:\Project1\Lab1\obj\Release\ClassFigure.csprojAssemblyReference.cache
