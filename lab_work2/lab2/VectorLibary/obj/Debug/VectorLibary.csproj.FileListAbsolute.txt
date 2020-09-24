@@ -5,3 +5,10 @@ D:\OOP\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.csproj.CoreCompileInpu
 D:\OOP\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.exe
 D:\OOP\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.pdb
 D:\OOP\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work2\lab2\VectorLibary\bin\Debug\VectorLibary.pdb
+D:\OOP_labs\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.pdb
+D:\OOP_labs\lab_work2\lab2\VectorLibary\bin\Debug\VectorLibary.dll.config
+D:\OOP_labs\lab_work2\lab2\VectorLibary\bin\Debug\VectorLibary.dll
+D:\OOP_labs\lab_work2\lab2\VectorLibary\obj\Debug\VectorLibary.dll

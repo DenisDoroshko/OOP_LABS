@@ -1,0 +1,11 @@
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\bin\Debug\ConsoleMenu.exe.config
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\bin\Debug\ConsoleMenu.exe
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\bin\Debug\ConsoleMenu.pdb
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\bin\Debug\VectorLibary.pdb
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\obj\Debug\ConsoleMenu.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.CopyComplete
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\obj\Debug\ConsoleMenu.exe
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\obj\Debug\ConsoleMenu.pdb
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\bin\Debug\VectorLibary.dll
+D:\OOP_labs\lab_work2\lab2\ConsoleMenu\bin\Debug\VectorLibary.dll.config
