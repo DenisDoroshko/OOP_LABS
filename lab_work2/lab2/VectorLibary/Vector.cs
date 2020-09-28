@@ -24,6 +24,7 @@ namespace VectorLibary
         /// Z-координата вектора
         /// </summary>
         public int CoordinateZ { get; set; }
+
         /// <summary>
         /// Переопределение оператора умножения для умножения экземпляров класса Vector
         /// </summary>
