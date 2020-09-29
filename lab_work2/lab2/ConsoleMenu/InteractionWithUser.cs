@@ -4,7 +4,7 @@ using VectorLibary;
 namespace ConsoleMenu
 {
     /// <summary>
-    /// Класс описывающий методы для взаимодействия с пользователем
+    /// Класс описывающий методы для взаимодействия с  пользователем
     /// </summary>
     class InteractionWithUser
     {
