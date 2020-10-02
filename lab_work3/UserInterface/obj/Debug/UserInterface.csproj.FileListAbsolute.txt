@@ -1,0 +1,12 @@
+D:\OOP_labs\lab_work3\UserInterface\bin\Debug\UserInterface.exe.config
+D:\OOP_labs\lab_work3\UserInterface\bin\Debug\UserInterface.exe
+D:\OOP_labs\lab_work3\UserInterface\bin\Debug\UserInterface.pdb
+D:\OOP_labs\lab_work3\UserInterface\bin\Debug\Matrix.dll
+D:\OOP_labs\lab_work3\UserInterface\bin\Debug\Matrix.pdb
+D:\OOP_labs\lab_work3\UserInterface\bin\Debug\Matrix.dll.config
+D:\OOP_labs\lab_work3\UserInterface\bin\Debug\Matrix.exe.config
+D:\OOP_labs\lab_work3\UserInterface\obj\Debug\UserInterface.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work3\UserInterface\obj\Debug\UserInterface.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work3\UserInterface\obj\Debug\UserInterface.csproj.CopyComplete
+D:\OOP_labs\lab_work3\UserInterface\obj\Debug\UserInterface.exe
+D:\OOP_labs\lab_work3\UserInterface\obj\Debug\UserInterface.pdb
