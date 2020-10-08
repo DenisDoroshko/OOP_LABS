@@ -4,12 +4,12 @@ using Matrixes;
 namespace UserInterface
 {
     /// <summary>
-    /// Класс хранящий методы взаимодействия с пользователем
+    /// A class that stores user interaction methods
     /// </summary>
     public class InteractionMethods
     {
         /// <summary>
-        /// Выпополняет действия в соответствии с выбором пользователя
+        /// Performs actions according to the user's choice
         /// </summary>
         public static void ShowMenu()
         {
@@ -103,9 +103,9 @@ namespace UserInterface
             }
         }
         /// <summary>
-        /// Предлагает пользователю сделать выбор
+        /// Prompts the user to make a choice
         /// </summary>
-        /// <returns>Выбор пользователя</returns>
+        /// <returns>User selection</returns>
         static int InputChoice()
         {
             int choice;
@@ -119,22 +119,22 @@ namespace UserInterface
             return choice;
         }
         /// <summary>
-        /// Вычисляет сумму квадратов элементов матрицы больших числа 83.6
+        ///Calculates the sum of squares of matrix elements of large numbers 83.6
         /// </summary>
-        /// <param name="A">Первая матрица</param>
-        /// <param name="B">Вторая матрица</param>
-        /// <returns>Сумма сумм квадратов двух матриц</returns>
+        /// <param name="A">The first matrix</param>
+        /// <param name="B">The second matrix</param>
+        /// <returns>Sum of sums of squares of two matrices</returns>
         public static double CalculateNumberSumSquares(Matrix A,Matrix B)
         {
             return A.CalculateSumSquares(83.6) + B.CalculateSumSquares(83.6);
         }
         /// <summary>
-        /// Вычисляет сумму квадратов элементов матрицы расположенных после заданного элемента
+        /// Calculates the sum of squares of matrix elements located after the specified element
         /// </summary>
-        /// <param name="A">Первая матрица</param>
-        /// <param name="B">Вторая матрица</param>
-        /// <param name="C">Третья матрица</param>
-        /// <returns>Сумма сумм квадратов</returns>
+        /// <param name="A">The first matrix</param>
+        /// <param name="B">The second matrix</param>
+        /// <param name="C">The third matrix</param>
+        /// <returns>Sum of square sums</returns>
         public static double CalculateLocatedSumSquares(Matrix A,Matrix B, Matrix C)
         {
             int row;
@@ -156,12 +156,12 @@ namespace UserInterface
             }
         }
         /// <summary>
-        /// Если матрицы равны заменяет отрицательные элементы последнего столбца нулями
+        /// If the matrices are equal replaces the negative elements of the last column with zeros
         /// </summary>
-        /// <param name="A">Первая матрица</param>
-        /// <param name="B">Вторая матрица</param>
-        /// <param name="C">Третья матрица</param>
-        /// <returns>Равны ли три матрицы</returns>
+        /// <param name="A">The first matrix</param>
+        /// <param name="B">The second matrix</param>
+        /// <param name="C">The third matrix</param>
+        /// <returns>True if the matrices are equal; otherwise, false</returns>
         public static bool ReplaceNegativeNumbers(ref Matrix A,ref Matrix B,ref Matrix C)
         {
             bool result = false;

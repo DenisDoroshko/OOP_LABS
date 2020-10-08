@@ -3,7 +3,7 @@
 namespace Matrixes
 {
     /// <summary>
-    /// Представляет матрицу вещественных чисел
+    /// Represents a matrix of real numbers
     /// </summary>
     public class Matrix
     {
@@ -11,7 +11,7 @@ namespace Matrixes
         private int numberRows;
         private int numberColumns;
         /// <summary>
-        /// Двумерный массив вещественных чисел
+        /// Two-dimensional array of real numbers
         /// </summary>
         public double[,] Numbers
         {
@@ -19,25 +19,25 @@ namespace Matrixes
 
         }
         /// <summary>
-        /// Количество строк
+        /// Number of lines
         /// </summary>
         public int NumberRows
         {
             get { return numberRows; }
         }
         /// <summary>
-        /// Количесво столбов
+        /// Number of columns
         /// </summary>
         public int NumberColumns
         {
             get { return numberColumns; }
         }
         /// <summary>
-        /// Создает экземпляр матрицы
+        /// Creates an instance of the matrix
         /// </summary>
-        /// <param name="NumberRows">Количество строк</param>
-        /// <param name="NumberColumns">Количество столбцов</param>
-        /// <param name="Numbers">Двумерный массив вещественных чисел</param>
+        /// <param name="NumberRows">Number of lines</param>
+        /// <param name="NumberColumns">Number of columns</param>
+        /// <param name="Numbers">Two-dimensional array of real numbers</param>
         public Matrix(int NumberRows, int NumberColumns, double[,] Numbers)
         {
             numberRows = NumberRows;
@@ -45,7 +45,7 @@ namespace Matrixes
             numbers = Numbers;
         }
         /// <summary>
-        /// Создает экземпляр матрицы
+        /// Creates an instance of the matrix
         /// </summary>
         public Matrix()
         {
@@ -54,7 +54,7 @@ namespace Matrixes
         /// <summary>
         /// Вводит матрицу
         /// </summary>
-        /// <returns>Была ли введена матрица</returns>
+        /// <returns>Has the matrix been entered</returns>
         public bool InputMatrix()
         {
             int rows;
@@ -97,7 +97,7 @@ namespace Matrixes
             return resultInput;
         }
         /// <summary>
-        /// Выводит матрицу
+        /// Outputs the matrix
         /// </summary>
         public void ShowMatrix()
         {
@@ -111,10 +111,10 @@ namespace Matrixes
             }
         }
         /// <summary>
-        /// Вычисляет сумму квадратов элементов матрицы больших заданного числа
+        /// Calculates the sum of squares of matrix elements larger than the specified number
         /// </summary>
         /// <param name="number"></param>
-        /// <returns>Сумма квадратов</returns>
+        /// <returns>Sum of squares</returns>
         public double CalculateSumSquares(double number)
         {
             double sum = 0;
@@ -131,11 +131,11 @@ namespace Matrixes
             return sum;
         }
         /// <summary>
-        /// Вычисляет сумму квадратов элементов расположенных после заданного элемента
+        /// Calculates the sum of squares of elements located after the specified element
         /// </summary>
-        /// <param name="row">Строка заданного элемента</param>
-        /// <param name="column">Столбец заданного элемента</param>
-        /// <returns>Сумма квадартов</returns>
+        /// <param name="row">Row number of the specified element</param>
+        /// <param name="column">Column number of the specified element</param>
+        /// <returns>Sum of squares</returns>
         public double CalculateSumSquares(int row, int column)
         {
             double sum = 0;
@@ -151,12 +151,12 @@ namespace Matrixes
             return sum;
         }
         /// <summary>
-        /// Вичисляет произведение двух матриц
+        /// Calculates the product of two matrices
         /// </summary>
-        /// <param name="firstMatrix">Первая исходная матрица</param>
-        /// <param name="secondMatrix">Вторая исходная матрица</param>
-        /// <param name="resultMatrix">Новая матрица являющаяся результатом произведения</param>
-        /// <returns>Умножены ли матрицы</returns>
+        /// <param name="firstMatrix">The first source matrix</param>
+        /// <param name="secondMatrix">The second source matrix</param>
+        /// <param name="resultMatrix">A new matrix that is the result of the product</param>
+        /// <returns>The value is true if the work was completed correctly; otherwise, the value is false</returns>
         public static bool ScalarMultiple(Matrix firstMatrix, Matrix secondMatrix, ref Matrix resultMatrix)
         {
             int indexColumn;
@@ -185,30 +185,30 @@ namespace Matrixes
             return resultOperation;
         }
         /// <summary>
-        /// Перегрузка оператора отношения двух матриц
+        /// Operator overloading is the relationship between the two matrices
         /// </summary>
-        /// <param name="firstMatrix">Первая матрица</param>
-        /// <param name="secondMatrix">Вторая матрица</param>
-        /// <returns>Возвращает истину если матрицы равны</returns>
+        /// <param name="firstMatrix">The first matrix</param>
+        /// <param name="secondMatrix">The second matrix</param>
+        /// <returns>True if the matrices are equal; otherwise, false</returns>
         public static bool operator == (Matrix firstMatrix, Matrix secondMatrix)
         {
             return firstMatrix.Equals(secondMatrix);
         }
         /// <summary>
-        /// Перегрузка оператора отношения двух матриц
+        /// Operator overloading is the relationship between the two matrices
         /// </summary>
-        /// <param name="firstMatrix">Первая матрица</param>
-        /// <param name="secondMatrix">Вторая матрица</param>
-        /// <returns>Возвращает истину если матрицы не равны</returns>
+        /// <param name="firstMatrix">The first matrix</param>
+        /// <param name="secondMatrix">The second matrix</param>
+        /// <returns>True if the matrices are not equal; otherwise, false</returns>
         public static bool operator !=(Matrix firstMatrix, Matrix secondMatrix)
         {
             return !firstMatrix.Equals(secondMatrix);
         }
         /// <summary>
-        /// Переопределение матода Equals
+        /// Redefining the Equals method
         /// </summary>
         /// <param name="obj"></param>
-        /// <returns>Значение true, если заданный объект равен текущему; в противном случае - значение false</returns>
+        /// <returns>True if the specified object is equal to the current object; otherwise, false</returns>
         public override bool Equals(object obj)
         {
             if(obj == null || GetType()!= obj.GetType())
@@ -237,9 +237,9 @@ namespace Matrixes
             return true;
         }
         /// <summary>
-        /// Переопределение метода GetHashCode вычисляющего хеш-код текущего объекта
+        /// Redefining the GetHashCode method that calculates the hash code of the current object
         /// </summary>
-        /// <returns>Хеш-код текущего объекта</returns>
+        /// <returns>Hash code of the current object</returns>
         public override int GetHashCode()
         {
             return numberRows * numberColumns /2 ;
