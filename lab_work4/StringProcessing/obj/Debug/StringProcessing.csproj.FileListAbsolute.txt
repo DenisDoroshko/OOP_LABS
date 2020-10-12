@@ -1,0 +1,7 @@
+D:\OOP_labs\lab_work4\StringProcessing\bin\Debug\StringProcessing.exe.config
+D:\OOP_labs\lab_work4\StringProcessing\bin\Debug\StringProcessing.exe
+D:\OOP_labs\lab_work4\StringProcessing\bin\Debug\StringProcessing.pdb
+D:\OOP_labs\lab_work4\StringProcessing\obj\Debug\StringProcessing.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work4\StringProcessing\obj\Debug\StringProcessing.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work4\StringProcessing\obj\Debug\StringProcessing.exe
+D:\OOP_labs\lab_work4\StringProcessing\obj\Debug\StringProcessing.pdb
