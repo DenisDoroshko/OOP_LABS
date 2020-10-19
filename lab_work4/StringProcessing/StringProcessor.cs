@@ -7,14 +7,17 @@ namespace StringProcessing
     /// <summary>
     /// A class that provides methods for working with string 
     /// </summary>
+
     public static class StringProcessor
     {
+
         /// <summary>
         /// Countes how many times a given word appears in a string
         /// </summary>
         /// <param name="givenString">Given string</param>
         /// <param name="givenWord">Given word</param>
         /// <returns>How many times a word has been encountered</returns>
+        
         public static int CountWord(string givenString,string givenWord)
         {
             string onlyWords = Regex.Replace(givenString, "[^a-zA-Zа-яА-Я]", " ");
@@ -30,11 +33,13 @@ namespace StringProcessing
             }
             return counter;
         }
+
         /// <summary>
         /// Forms an array of sentences in Russian
         /// </summary>
         /// <param name="givenString">Given text</param>
         /// <returns>An array of sentences in Russian</returns>
+        
         public static StringBuilder[] ExtractRussian(string givenText)
         {
             string[] sentences =givenText.Split(new char[] { '.','!','?'}, StringSplitOptions.RemoveEmptyEntries);
