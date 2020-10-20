@@ -1,0 +1,11 @@
+D:\OOP_labs\lab_work5\UI\bin\Debug\UI.exe.config
+D:\OOP_labs\lab_work5\UI\bin\Debug\UI.exe
+D:\OOP_labs\lab_work5\UI\bin\Debug\UI.pdb
+D:\OOP_labs\lab_work5\UI\bin\Debug\Parsing.pdb
+D:\OOP_labs\lab_work5\UI\obj\Debug\UI.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work5\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work5\UI\obj\Debug\UI.csproj.CopyComplete
+D:\OOP_labs\lab_work5\UI\obj\Debug\UI.exe
+D:\OOP_labs\lab_work5\UI\obj\Debug\UI.pdb
+D:\OOP_labs\lab_work5\UI\bin\Debug\Parsing.dll
+D:\OOP_labs\lab_work5\UI\bin\Debug\Parsing.dll.config
