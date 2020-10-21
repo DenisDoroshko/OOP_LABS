@@ -4,3 +4,4 @@ D:\OOP_labs\lab_work5\Parsing\obj\Debug\Parsing.pdb
 D:\OOP_labs\lab_work5\Parsing\bin\Debug\Parsing.dll.config
 D:\OOP_labs\lab_work5\Parsing\bin\Debug\Parsing.dll
 D:\OOP_labs\lab_work5\Parsing\obj\Debug\Parsing.dll
+D:\OOP_labs\lab_work5\Parsing\obj\Debug\Parsing.csprojAssemblyReference.cache

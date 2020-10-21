@@ -70,6 +70,7 @@ namespace UI
             int choice;
             string input = Console.ReadLine();
             int.TryParse(input, out choice);
+            phoneNumbers.Clear();
             switch (choice)
             {
                 case 1:
