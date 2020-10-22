@@ -44,30 +44,45 @@ namespace StringProcessing
         {
             string[] sentences =givenText.Split(new char[] { '.','!','?'}, StringSplitOptions.RemoveEmptyEntries);
             string symbols = Regex.Replace(givenText, "[^!.?]", "");
-
-            for(int i = 0; i < sentences.Length && symbols.Length!=0; i++)
+            StringBuilder[] resultString;
+            if (symbols.Length == sentences.Length)
             {
-                sentences[i] += symbols[i];
-            }
-            int numberOfRussianSentence=0;
-            foreach(string sentence in sentences)
-            {
-                if (Regex.IsMatch(sentence, "[а-яА-Я]"))
+                for (int i = 0; i < sentences.Length && symbols.Length != 0; i++)
                 {
-                    numberOfRussianSentence++;
+                    sentences[i] += symbols[i];
+                }
+                int numberOfRussianSentence = 0;
+                foreach (string sentence in sentences)
+                {
+                    if (Regex.IsMatch(sentence, "[а-яА-Я]"))
+                    {
+                        numberOfRussianSentence++;
+                    }
+                }
+                resultString = new StringBuilder[numberOfRussianSentence];
+                numberOfRussianSentence = 0;
+                foreach (string sentence in sentences)
+                {
+                    if (Regex.IsMatch(sentence, "[а-яА-Я]"))
+                    {
+                        resultString[numberOfRussianSentence] = new StringBuilder(sentence);
+                        numberOfRussianSentence++;
+                    }
                 }
             }
-            StringBuilder[] resultString = new StringBuilder[numberOfRussianSentence];
-            numberOfRussianSentence = 0;
-            foreach(string sentence in sentences)
+            else
             {
-                if (Regex.IsMatch(sentence, "[а-яА-Я]"))
-                {
-                    resultString[numberOfRussianSentence] = new StringBuilder(sentence);
-                    numberOfRussianSentence++;
-                }
+                Console.WriteLine("Sentence is not completed");
+                resultString = new StringBuilder[1];
             }
+            
             return resultString;
+        }
+
+        public static string ParseSymbols(string givenText)
+        {
+            string onlySymbols = Regex.Replace(givenText, "[a-zA-Zа-яА-Я0-9]", "");
+            return onlySymbols;
         }
     }
 }
