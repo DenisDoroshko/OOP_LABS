@@ -1,0 +1,7 @@
+D:\OOP_labs\lab_work6\TicketAccounting\bin\Debug\TicketAccounting.pdb
+D:\OOP_labs\lab_work6\TicketAccounting\obj\Debug\TicketAccounting.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work6\TicketAccounting\obj\Debug\TicketAccounting.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work6\TicketAccounting\obj\Debug\TicketAccounting.pdb
+D:\OOP_labs\lab_work6\TicketAccounting\bin\Debug\TicketAccounting.dll.config
+D:\OOP_labs\lab_work6\TicketAccounting\bin\Debug\TicketAccounting.dll
+D:\OOP_labs\lab_work6\TicketAccounting\obj\Debug\TicketAccounting.dll
