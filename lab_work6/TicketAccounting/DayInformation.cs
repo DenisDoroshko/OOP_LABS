@@ -1,28 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TicketAccounting
 {
+    /// <summary>
+    /// Class storing day information
+    /// </summary>
+    
     public class DayInformation
     {
+        /// <summary>
+        /// Creates an instance of the DayInformation class
+        /// </summary>
+        /// <param name="Date">Date</param>
+        /// <param name="Tickets">List of tickets</param>
+
         public DayInformation(DateTime Date,List<Ticket> Tickets)
         {
             this.Date = Date;
             this.Tickets = Tickets;
         }
+
+        /// <summary>
+        /// Creates an instance of the DayInformation class
+        /// </summary>
+        
         public DayInformation()
         {
 
         }
+
+        /// <summary>
+        /// Date
+        /// </summary>
+        /// 
         public DateTime Date;
+
+        /// <summary>
+        /// List of tickets
+        /// </summary>
+        
         public List<Ticket> Tickets;
+
+        /// <summary>
+        /// Number of tickets sold on that day
+        /// </summary>
+        
         public int TicketsNumber { get { return Tickets.Count; } }
-        public int ParterreNumber { get { return GetParterreNumber(); } }
-        public int LoggiaNumber { get { return GetLoggiaNumber(); } }
-        public int BalconyNumber { get { return GetBalconyNumber(); } }
+
+        /// <summary>
+        /// Number of tickets sold on that day to the parterre
+        /// </summary>
+        
+        public int ParterreNumber { get { return GetNumber(TicketTypes.Parterre); } }
+
+        /// <summary>
+        /// Number of tickets sold on that day to the loggia
+        /// </summary>
+        
+        public int LoggiaNumber { get { return GetNumber(TicketTypes.Loggia); } }
+
+        /// <summary>
+        /// Number of tickets sold on that day to the balcony
+        /// </summary>
+        
+        public int BalconyNumber { get { return GetNumber(TicketTypes.Balcony); } }
+
+        /// <summary>
+        /// Adds the ticket to the list of days
+        /// </summary>
+        /// <param name="days">List of days</param>
+        /// <param name="ticket">Ticket</param>
 
         public static void AddTicket(List<DayInformation> days,Ticket ticket)
         {
@@ -39,36 +87,30 @@ namespace TicketAccounting
             if (!dayExistense)
                 days.Add(new DayInformation(ticket.Date, new List<Ticket>() { ticket }));
         }
-        int GetParterreNumber()
+        /// <summary>
+        /// Gets the number of tickets of the given type
+        /// </summary>
+        /// <param name="type">Ticket type</param>
+        /// <returns>The number of tickets of the given type</returns>
+        
+        int GetNumber(TicketTypes type)
         {
             int number = 0;
             foreach(var ticket in Tickets)
             {
-                if (ticket.TicketType == TicketTypes.Parterre)
+                if (ticket.TicketType == type)
                     number++;
             }
             return number;
         }
-        int GetLoggiaNumber()
-        {
-            int number = 0;
-            foreach (var ticket in Tickets)
-            {
-                if (ticket.TicketType == TicketTypes.Loggia)
-                    number++;
-            }
-            return number;
-        }
-        int GetBalconyNumber()
-        {
-            int number = 0;
-            foreach (var ticket in Tickets)
-            {
-                if (ticket.TicketType == TicketTypes.Balcony)
-                    number++;
-            }
-            return number;
-        }
+
+        /// <summary>
+        /// Gets the average number of tickets of the given type
+        /// </summary>
+        /// <param name="days">Days</param>
+        /// <param name="type">Ticket type</param>
+        /// <returns>The average number of tickets of the given type</returns>
+        
         public static double GetAverage(List<DayInformation> days,TicketTypes type)
         {
             int typeNumber=0;
@@ -82,23 +124,5 @@ namespace TicketAccounting
             }
             return typeNumber / days.Count;
         }
-        public static void SortByDate(List<DayInformation> days)
-        {
-            for (int i = 0; i < days.Count; i++)
-            {
-                for (int j = 0; j < days.Count - 1; j++)
-                {
-                    int location = DateTime.Compare(days[j].Date, days[j + 1].Date);
-                    if (location == 1)
-                    {
-                        DayInformation tempVariable = days[j];
-                        days[j] = days[j + 1];
-                        days[j + 1] = tempVariable;
-                    }
-                }
-            }
-        }
-
-
     }
 }

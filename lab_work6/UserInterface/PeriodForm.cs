@@ -12,19 +12,43 @@ using TicketAccounting;
 
 namespace UserInterface
 {
+    /// <summary>
+    /// The class representing a form that implements the interface for showing peroi information
+    /// </summary>
+    
     public partial class PeriodForm : Form
     {
+        /// <summary>
+        /// Link to the main form
+        /// </summary>
+        
         private MainForm mainForm;
+
+        /// <summary>
+        /// Creates an instance of the PeriodForm class
+        /// </summary>
+        
         public PeriodForm()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Creates an instance of the PeriodForm class
+        /// </summary>
+        
         public PeriodForm(MainForm mainForm)
         {
             InitializeComponent();
             this.mainForm = mainForm;
         }
 
+        /// <summary>
+        /// Shows average number of tickets by type by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void showAveragesButton_Click(object sender, EventArgs e)
         {
             minimalDaylabel.Text = "";
@@ -48,6 +72,12 @@ namespace UserInterface
             }
         }
 
+        /// <summary>
+        /// Shows the day with the minimal number of tickets sold
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void showMinimalDaybutton_Click(object sender, EventArgs e)
         {
             errorLabel.Text = "";
@@ -100,17 +130,12 @@ namespace UserInterface
             }
         }
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            mainForm.Show();
-        }
-
-        private void PeriodForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            mainForm.Show();
-        }
-
+        /// <summary>
+        /// Gets period days
+        /// </summary>
+        /// <param name="periodDays">Period days</param>
+        /// <returns>The value is true if peroid is correct; otherwise value is false</returns>
+        
         bool GetPeriodDays(List<DayInformation> periodDays)
         {
             bool isCorrectPeriod;
@@ -139,6 +164,29 @@ namespace UserInterface
                 isCorrectPeriod = false;
             }
             return isCorrectPeriod;
+        }
+
+        /// <summary>
+        /// Returns to the main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mainForm.Show();
+        }
+
+        /// <summary>
+        /// Shows main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void PeriodForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainForm.Show();
         }
         
     }

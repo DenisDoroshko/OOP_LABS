@@ -11,19 +11,43 @@ using TicketAccounting;
 
 namespace UserInterface
 {
+    /// <summary>
+    /// The class representing a form that implements the interface for showing the days
+    /// </summary>
+    
     public partial class ShowDayForm : Form
     {
+        /// <summary>
+        /// Link to the main form
+        /// </summary>
+
         private MainForm mainForm;
+
+        /// <summary>
+        /// Creates an instance of the ShowDayForm class
+        /// </summary>
+
         public ShowDayForm()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Creates an instance of the ShowDayForm class
+        /// </summary>
+
         public ShowDayForm(MainForm mainForm)
         {
             InitializeComponent();
             this.mainForm = mainForm;
         }
 
+        /// <summary>
+        /// Shows the selected day by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void ShowButton_Click(object sender, EventArgs e)
         {
             DateTime date = SelectedDate.Value;
@@ -49,11 +73,23 @@ namespace UserInterface
 
         }
 
+        /// <summary>
+        /// Returns to the main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
             mainForm.Show();
         }
+
+        /// <summary>
+        /// Shows main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void ShowDayForm_FormClosed(object sender, FormClosedEventArgs e)
         {

@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PeriodButton = new System.Windows.Forms.Button();
             this.ShowButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AppLabel = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +43,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.ExitButton);
+            this.panel1.Controls.Add(this.PeriodButton);
             this.panel1.Controls.Add(this.ShowButton);
             this.panel1.Controls.Add(this.EditButton);
             this.panel1.Controls.Add(this.AddButton);
@@ -53,20 +55,20 @@
             this.panel1.Size = new System.Drawing.Size(610, 379);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // PeriodButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(138)))), ((int)(((byte)(234)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(196, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Period information";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.PeriodButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(138)))), ((int)(((byte)(234)))));
+            this.PeriodButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PeriodButton.FlatAppearance.BorderSize = 0;
+            this.PeriodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PeriodButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PeriodButton.Location = new System.Drawing.Point(196, 278);
+            this.PeriodButton.Name = "PeriodButton";
+            this.PeriodButton.Size = new System.Drawing.Size(215, 38);
+            this.PeriodButton.TabIndex = 5;
+            this.PeriodButton.Text = "Period information";
+            this.PeriodButton.UseVisualStyleBackColor = false;
+            this.PeriodButton.Click += new System.EventHandler(this.peroidButton_Click);
             // 
             // ShowButton
             // 
@@ -136,6 +138,21 @@
             this.AppLabel.Text = "Ticket Accounting";
             this.AppLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(138)))), ((int)(((byte)(234)))));
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.Location = new System.Drawing.Point(196, 329);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(215, 38);
+            this.ExitButton.TabIndex = 6;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,7 +176,8 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button ShowButton;
         private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PeriodButton;
+        private System.Windows.Forms.Button ExitButton;
     }
 }
 

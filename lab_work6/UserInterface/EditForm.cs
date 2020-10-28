@@ -11,19 +11,43 @@ using TicketAccounting;
 
 namespace UserInterface
 {
+    /// <summary>
+    /// The class representing a form that implements the interface for edit a data
+    /// </summary>
+    
     public partial class EditForm : Form
     {
+        /// <summary>
+        /// Link to the main form
+        /// </summary>
+        
         private MainForm mainForm;
+
+        /// <summary>
+        /// Creates an instance of the EditForm class
+        /// </summary>
+        
         public EditForm()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Creates an instance of the EditForm class
+        /// </summary>
+        
         public EditForm(MainForm mainForm)
         {
             InitializeComponent();
             this.mainForm = mainForm;
         }
 
+        /// <summary>
+        /// Clears the data by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void clearAllButton_Click(object sender, EventArgs e)
         {
             string message = "Are you sure?";
@@ -36,6 +60,12 @@ namespace UserInterface
                 MainForm.Days.Clear();
             }
         }
+
+        /// <summary>
+        /// Clears one selected day by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void clearDayButton_Click(object sender, EventArgs e)
         {
@@ -53,11 +83,23 @@ namespace UserInterface
             }
         }
 
+        /// <summary>
+        /// Returns to the main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
             mainForm.Show();
         }
+
+        /// <summary>
+        /// Shows main form by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void EditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
