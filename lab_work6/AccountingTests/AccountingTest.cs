@@ -14,8 +14,8 @@ namespace AccountingTests
         {
             //Arange
             int expected = 1;
-            List<DayInformation> days = new List<DayInformation>() {new DayInformation(new DateTime(2020, 10, 20),new List<Ticket>() { new Ticket()}) };
-            Ticket ticket = new Ticket(TicketTypes.Parterre, new DateTime(2020,10,20));
+            List<DayInformation> days = new List<DayInformation>() {new DayInformation(new DateTime(2020, 10, 20),new List<DayInformation.Ticket>() { new DayInformation.Ticket()}) };
+            DayInformation.Ticket ticket = new DayInformation.Ticket(TicketTypes.Parterre, new DateTime(2020,10,20));
             //Act
             DayInformation.AddTicket(days, ticket);
             int result = days.Count;
@@ -28,9 +28,12 @@ namespace AccountingTests
         {
             //Arange
             int expected = 2;
-            List<DayInformation> days = new List<DayInformation>() { new DayInformation(new DateTime(2020, 10, 20), new List<Ticket>() { new Ticket() }) };
-            Ticket fristTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 22));
-            Ticket secondTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 22));
+            List<DayInformation> days = new List<DayInformation>() { new DayInformation(new DateTime(2020, 10, 20),
+                new List<DayInformation.Ticket>() { new DayInformation.Ticket() }) };
+            DayInformation.Ticket fristTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 22));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 22));
             //Act
             DayInformation.AddTicket(days, fristTicket);
             DayInformation.AddTicket(days, secondTicket);
@@ -44,10 +47,14 @@ namespace AccountingTests
         {
             //Arange
             int expected = 4;
-            List<DayInformation> days = new List<DayInformation>() { new DayInformation(new DateTime(2020, 10, 20), new List<Ticket>() { new Ticket() }) };
-            Ticket firstTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 21));
-            Ticket secondTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 22));
-            Ticket thirdTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 23));
+            List<DayInformation> days = new List<DayInformation>() { new DayInformation(new DateTime(2020, 10, 20),
+                new List<DayInformation.Ticket>() { new DayInformation.Ticket() }) };
+            DayInformation.Ticket firstTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 21));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 22));
+            DayInformation.Ticket thirdTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 23));
             //Act
             DayInformation.AddTicket(days, firstTicket);
             DayInformation.AddTicket(days, secondTicket);
@@ -63,9 +70,12 @@ namespace AccountingTests
             //Arange
             int expected = 2;
             List<DayInformation> day = new List<DayInformation>();
-            Ticket firstTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 25));
-            Ticket secondTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 10, 25));
-            Ticket thirdTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 25));
+            DayInformation.Ticket firstTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket thirdTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 25));
             DayInformation.AddTicket(day, firstTicket);
             DayInformation.AddTicket(day, secondTicket);
             DayInformation.AddTicket(day, thirdTicket);
@@ -80,11 +90,16 @@ namespace AccountingTests
             //Arange
             int expected = 4;
             List<DayInformation> day = new List<DayInformation>();
-            Ticket firstTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 25));
-            Ticket secondTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 25));
-            Ticket thirdTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 10, 25));
-            Ticket fourthTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 25));
-            Ticket fifthTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 25));
+            DayInformation.Ticket firstTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket thirdTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket fourthTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket fifthTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 25));
             DayInformation.AddTicket(day, firstTicket);
             DayInformation.AddTicket(day, secondTicket);
             DayInformation.AddTicket(day, thirdTicket);
@@ -101,9 +116,12 @@ namespace AccountingTests
             //Arange
             int expected = 3;
             List<DayInformation> day = new List<DayInformation>();
-            Ticket firstTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 10, 25));
-            Ticket secondTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 10, 25));
-            Ticket thirdTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 10, 25));
+            DayInformation.Ticket firstTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket thirdTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 10, 25));
             DayInformation.AddTicket(day, firstTicket);
             DayInformation.AddTicket(day, secondTicket);
             DayInformation.AddTicket(day, thirdTicket);
@@ -117,16 +135,19 @@ namespace AccountingTests
         public void GetAverageInParterre()
         {
             //Arange
-            double expected = 1;
+            double expected = 0.667;
             List<DayInformation> days = new List<DayInformation>();
-            Ticket firstTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 24));
-            Ticket secondTicket = new Ticket(TicketTypes.Parterre, new DateTime(2020, 10, 24));
-            Ticket thirdTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 10, 25));
+            DayInformation.Ticket firstTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 24));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Parterre,
+                new DateTime(2020, 10, 25));
+            DayInformation.Ticket thirdTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 10, 26));
             DayInformation.AddTicket(days, firstTicket);
             DayInformation.AddTicket(days, secondTicket);
             DayInformation.AddTicket(days, thirdTicket);
             //Act
-            double result = DayInformation.GetAverage(days, TicketTypes.Parterre);
+            double result = Math.Round(DayInformation.GetAverage(days, TicketTypes.Parterre),3);
             //Assert
             Assert.AreEqual(expected, result);
         }
@@ -136,10 +157,14 @@ namespace AccountingTests
             //Arange
             double expected = 4;
             List<DayInformation> days = new List<DayInformation>();
-            Ticket firstTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 24));
-            Ticket secondTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 24));
-            Ticket thirdTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 24));
-            Ticket fourthTicket = new Ticket(TicketTypes.Loggia, new DateTime(2020, 10, 24));
+            DayInformation.Ticket firstTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 24));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 24));
+            DayInformation.Ticket thirdTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 24));
+            DayInformation.Ticket fourthTicket = new DayInformation.Ticket(TicketTypes.Loggia,
+                new DateTime(2020, 10, 24));
             DayInformation.AddTicket(days, firstTicket);
             DayInformation.AddTicket(days, secondTicket);
             DayInformation.AddTicket(days, thirdTicket);
@@ -155,10 +180,14 @@ namespace AccountingTests
             //Arange
             double expected = 2;
             List<DayInformation> days = new List<DayInformation>();
-            Ticket firstTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 04, 11));
-            Ticket secondTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 04, 11));
-            Ticket thirdTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 04, 12));
-            Ticket fourthTicket = new Ticket(TicketTypes.Balcony, new DateTime(2020, 04, 12));
+            DayInformation.Ticket firstTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 04, 11));
+            DayInformation.Ticket secondTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 04, 11));
+            DayInformation.Ticket thirdTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 04, 12));
+            DayInformation.Ticket fourthTicket = new DayInformation.Ticket(TicketTypes.Balcony,
+                new DateTime(2020, 04, 12));
             DayInformation.AddTicket(days, firstTicket);
             DayInformation.AddTicket(days, secondTicket);
             DayInformation.AddTicket(days, thirdTicket);

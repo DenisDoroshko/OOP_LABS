@@ -29,6 +29,7 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeriodForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.minimalDaylabel = new System.Windows.Forms.Label();
             this.minimalLabel = new System.Windows.Forms.Label();
@@ -194,7 +195,7 @@ namespace UserInterface
             this.toDatePicker.Name = "toDatePicker";
             this.toDatePicker.Size = new System.Drawing.Size(200, 20);
             this.toDatePicker.TabIndex = 10;
-            this.toDatePicker.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0, 0);
+            this.toDatePicker.Value = new System.DateTime(2020, 10, 29, 0, 0, 0, 0);
             // 
             // backButton
             // 
@@ -229,7 +230,7 @@ namespace UserInterface
             this.fromDatePicker.Name = "fromDatePicker";
             this.fromDatePicker.Size = new System.Drawing.Size(200, 20);
             this.fromDatePicker.TabIndex = 4;
-            this.fromDatePicker.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0, 0);
+            this.fromDatePicker.Value = new System.DateTime(2020, 10, 29, 0, 0, 0, 0);
             // 
             // clearLabel
             // 
@@ -285,9 +286,12 @@ namespace UserInterface
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 379);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PeriodForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PeriodInformationForm";
+            this.Text = "Ticket accounting";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PeriodForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

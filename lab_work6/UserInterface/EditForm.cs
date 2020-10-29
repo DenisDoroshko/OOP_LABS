@@ -53,11 +53,17 @@ namespace UserInterface
             string message = "Are you sure?";
             string caption = "Delete confirmation";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBoxIcon icon = MessageBoxIcon.Warning;
             DialogResult result;
-            result = MessageBox.Show(message, caption, buttons);
+            result = MessageBox.Show(message, caption, buttons,icon);
             if(result == DialogResult.Yes)
             {
                 MainForm.Days.Clear();
+                message = "All data has been deleted";
+                caption = "Operation result";
+                icon = MessageBoxIcon.Information;
+                buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, caption, buttons, icon);
             }
         }
 
@@ -72,14 +78,19 @@ namespace UserInterface
             string message = "Are you sure?";
             string caption = "Delete confirmation";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBoxIcon icon = MessageBoxIcon.Warning;
             DialogResult result;
-            result = MessageBox.Show(message, caption, buttons);
+            result = MessageBox.Show(message, caption, buttons,icon);
             if (result == DialogResult.Yes)
             {
                 DateTime date = SelectedDate.Value;
                 DayInformation day = MainForm.Days.Find(x => x.Date == date);
-                if (MainForm.Days.Remove(day))
-                    clearLabel.Text = "yes";
+                MainForm.Days.Remove(day);
+                message = "The day was deleted";
+                caption = "Operation result";
+                icon = MessageBoxIcon.Information;
+                buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, caption, buttons, icon);
             }
         }
 

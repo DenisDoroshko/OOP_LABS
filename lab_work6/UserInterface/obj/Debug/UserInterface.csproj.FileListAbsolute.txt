@@ -12,7 +12,7 @@ D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.csproj.CoreCompileIn
 D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.csproj.CopyComplete
 D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.exe
 D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.pdb
-D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.AddTicketForm.resources
 D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.ShowDayForm.resources
 D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.EditForm.resources
 D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.PeriodForm.resources
+D:\OOP_labs\lab_work6\UserInterface\obj\Debug\UserInterface.AddForm.resources

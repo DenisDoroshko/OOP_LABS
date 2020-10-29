@@ -30,6 +30,7 @@ namespace UserInterface
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowDayForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.backButton = new System.Windows.Forms.Button();
             this.numberBalcony = new System.Windows.Forms.Label();
@@ -166,7 +167,7 @@ namespace UserInterface
             this.SelectedDate.Name = "SelectedDate";
             this.SelectedDate.Size = new System.Drawing.Size(200, 20);
             this.SelectedDate.TabIndex = 4;
-            this.SelectedDate.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0, 0);
+            this.SelectedDate.Value = new System.DateTime(2020, 10, 29, 0, 0, 0, 0);
             // 
             // DateLabel
             // 
@@ -222,9 +223,12 @@ namespace UserInterface
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 379);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ShowDayForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ShowDayForm";
+            this.Text = "Ticket accounting";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ShowDayForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

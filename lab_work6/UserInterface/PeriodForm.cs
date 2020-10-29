@@ -90,16 +90,12 @@ namespace UserInterface
             List<DayInformation> periodDays = new List<DayInformation>();
             if (GetPeriodDays(periodDays))
             {
-                
-                DayInformation minimalDay = new DayInformation(new DateTime(),new List<Ticket>());
-                bool isEmpty = true;
-                foreach(var day in periodDays)
+
+                DayInformation minimalDay = periodDays[0];
+                foreach (var day in periodDays)
                 {
-                    if(minimalDay.Tickets.Count < day.Tickets.Count)
-                    {
+                    if (minimalDay.Tickets.Count > day.Tickets.Count)
                         minimalDay = day;
-                        isEmpty = false;
-                    }
                         
                 }
                 int number = 0;
@@ -108,19 +104,15 @@ namespace UserInterface
                     if (minimalDay.Tickets.Count == day.Tickets.Count)
                         number++;
                 }
-                if (isEmpty == true)
-                    number = 0;
+
                 switch (number)
                 {
-                    case 0:
-                        minimalDaylabel.Text = "All the days are empty";
-                        break;
                     case 1:
                         minimalDaylabel.Text = "The day with minimal tickets number: "
                            +minimalDay.Date.ToShortDateString()+" tickets number:"+minimalDay.Tickets.Count;
                         break;
                     default:
-                        minimalDaylabel.Text = "Days with a minimum tickets number more than two";
+                        minimalDaylabel.Text = "Days with a minimum tickets number more than one";
                         break;
                 }
             }
@@ -153,7 +145,7 @@ namespace UserInterface
                     }
                     else
                     {
-                        periodDays.Add(new DayInformation(currentDate, new List<Ticket>()));
+                        periodDays.Add(new DayInformation(currentDate, new List<DayInformation.Ticket>()));
                     }
                     currentDate = currentDate.AddDays(1);
                 }

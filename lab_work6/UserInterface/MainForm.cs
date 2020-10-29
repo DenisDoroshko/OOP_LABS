@@ -42,7 +42,7 @@ namespace UserInterface
         private void AddButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddTicketForm ticketForm = new AddTicketForm(this);
+            AddForm ticketForm = new AddForm(this);
             ticketForm.Show();
         }
 

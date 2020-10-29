@@ -66,8 +66,11 @@ namespace UserInterface
             else
             {
                 numberSold.Text = "0";
+                parterreLabel.Text = "";
                 numberParterre.Text = "";
+                loggiaLabel.Text = "";
                 numberLoggia.Text = "";
+                balconyLabel.Text = "";
                 numberBalcony.Text = "";
             }
 

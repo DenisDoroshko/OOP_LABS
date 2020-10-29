@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddTicketForm.cs">
+    <Compile Include="AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTicketForm.Designer.cs">
-      <DependentUpon>AddTicketForm.cs</DependentUpon>
+    <Compile Include="AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EditForm.cs">
       <SubType>Form</SubType>
@@ -78,8 +78,8 @@
     <Compile Include="ShowDayForm.Designer.cs">
       <DependentUpon>ShowDayForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddTicketForm.resx">
-      <DependentUpon>AddTicketForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>

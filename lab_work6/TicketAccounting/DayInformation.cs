@@ -10,15 +10,54 @@ namespace TicketAccounting
     public class DayInformation
     {
         /// <summary>
+        /// Class storing ticket data
+        /// </summary>
+        public class Ticket
+        {
+            /// <summary>
+            /// Creates an instance of the Ticket class
+            /// </summary>
+            /// <param name="TicketType">Ticket type</param>
+            /// <param name="Date">Ticket date</param>
+            public Ticket(TicketTypes ticketType, DateTime date)
+            {
+                this.TicketType = ticketType;
+                this.Date = date;
+            }
+
+            /// <summary>
+            /// Creates an instance of the Ticket class
+            /// </summary>
+
+            public Ticket()
+            {
+
+            }
+
+            /// <summary>
+            /// Ticket type
+            /// </summary>
+            /// 
+            public TicketTypes TicketType;
+
+            /// <summary>
+            /// Ticket date
+            /// </summary>
+
+            public DateTime Date;
+
+        }
+
+        /// <summary>
         /// Creates an instance of the DayInformation class
         /// </summary>
         /// <param name="Date">Date</param>
         /// <param name="Tickets">List of tickets</param>
 
-        public DayInformation(DateTime Date,List<Ticket> Tickets)
+        public DayInformation(DateTime date,List<Ticket> tickets)
         {
-            this.Date = Date;
-            this.Tickets = Tickets;
+            this.Date = date;
+            this.Tickets = tickets;
         }
 
         /// <summary>
@@ -93,7 +132,7 @@ namespace TicketAccounting
         /// <param name="type">Ticket type</param>
         /// <returns>The number of tickets of the given type</returns>
         
-        int GetNumber(TicketTypes type)
+        private int GetNumber(TicketTypes type)
         {
             int number = 0;
             foreach(var ticket in Tickets)
@@ -113,7 +152,7 @@ namespace TicketAccounting
         
         public static double GetAverage(List<DayInformation> days,TicketTypes type)
         {
-            int typeNumber=0;
+            double typeNumber=0;
             foreach(var day in days)
             {
                 foreach(var ticket in day.Tickets)
