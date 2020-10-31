@@ -1,0 +1,7 @@
+D:\OOP_labs\lab_work7\Apartments\bin\Debug\Flats.dll.config
+D:\OOP_labs\lab_work7\Apartments\bin\Debug\Flats.dll
+D:\OOP_labs\lab_work7\Apartments\bin\Debug\Flats.pdb
+D:\OOP_labs\lab_work7\Apartments\obj\Debug\Flats.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work7\Apartments\obj\Debug\Flats.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work7\Apartments\obj\Debug\Flats.dll
+D:\OOP_labs\lab_work7\Apartments\obj\Debug\Flats.pdb
