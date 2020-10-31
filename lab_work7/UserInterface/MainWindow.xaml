@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="820" Background="#FF1F76A8" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF4593E2">
-        <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="812" Background="#FF38E841">
-            <Label x:Name="mainLabel" Content="Flat accounting" Height="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Verdana" Cursor="" Foreground="#FFFFFBE9"/>
+        Title="MainWindow" Height="450" Width="780" Background="#FF1F76A8" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF5283EC">
+        <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="772" Background="#FF37B0E8">
+            <Label x:Name="mainLabel" Content="Flat accounting" Height="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Verdana" Cursor="" Foreground="Black"/>
         </StackPanel>
-        <Button x:Name="AddButton" Content="Add the flat" HorizontalAlignment="Center" Margin="0,123,0,0" VerticalAlignment="Top" Width="150" Height="43" Background="White" FontSize="20" FontWeight="Bold" Click="AddButton_Click"/>
-        <Button x:Name="EditButton" Content="Edit the data" HorizontalAlignment="Center" Margin="331,188,331,0" VerticalAlignment="Top" Width="150" Height="42" Background="White" FontSize="20" FontWeight="Bold" Click="EditButton_Click"/>
-        <Button x:Name="ShowButton" Content="Show the data" HorizontalAlignment="Center" Margin="331,251,331,0" VerticalAlignment="Top" Width="150" Height="42" Background="White" FontSize="20" FontWeight="Bold" Click="ShowButton_Click"/>
+        <Button x:Name="AddButton" Content="Add the flat" HorizontalAlignment="Center" Margin="311,124,293,0" VerticalAlignment="Top" Width="168" Height="44" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="AddButton_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="EditButton" Content="Edit the data" HorizontalAlignment="Center" Margin="311,188,293,0" VerticalAlignment="Top" Width="168" Height="44" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="EditButton_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="ShowButton" Content="Show the data" HorizontalAlignment="Center" Margin="311,252,293,0" VerticalAlignment="Top" Width="168" Height="44" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="ShowButton_Click" BorderBrush="{x:Null}"/>
 
     </Grid>
 </Window>

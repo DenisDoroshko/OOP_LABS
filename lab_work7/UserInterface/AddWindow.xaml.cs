@@ -59,32 +59,13 @@ namespace UserInterface
                 rooms = new Room[numberOfRooms];
                 var roomWindow = new CreateRoomWindow(this,0);
                 roomWindow.Show();
-                addFlatButton.Visibility = Visibility.Visible;
             }
 
         }
 
-        private void addFlatButton_Click(object sender, RoutedEventArgs e)
+        private void floorBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (unfilledRooms == 0)
-            {
-                string message = "The flat was added.";
-                string caption = "Addition result";
-                MessageBoxButton button = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.Information;
-                MessageBox.Show(message, caption, button, icon);
-                FlatCreator.CreateFlat(MainWindow.Flats, numberOfRooms, rooms, floor);
-                this.Close();
-            }   
-            else
-            {
-                string message = "The flat wasn't added.Not all rooms have been filled.";
-                string caption = "Error";
-                MessageBoxButton button = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.Error;
-                MessageBox.Show(message, caption, button, icon);
-                this.Close();
-            }
+            e.Handled = !(Char.IsDigit(e.Text, 0));
         }
     }
 }
