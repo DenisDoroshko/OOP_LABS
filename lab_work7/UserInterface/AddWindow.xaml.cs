@@ -21,13 +21,21 @@ namespace UserInterface
     /// </summary>
     public partial class AddWindow : Window
     {
+        public MainWindow mainWindow;
         public Room[] rooms;
         public int floor;
         public int numberOfRooms;
+        public bool washerAvailability;
+        public StoveTypes stoveType;
         public int unfilledRooms;
         public AddWindow()
         {
             InitializeComponent();
+        }
+        public AddWindow(MainWindow mainWindow)
+        {
+            InitializeComponent();
+            this.mainWindow = mainWindow;
         }
 
         private void sendFlatButton_Click(object sender, RoutedEventArgs e)
@@ -45,7 +53,17 @@ namespace UserInterface
             flatTypes.TryGetValue(flatType, out numberOfRooms);
             string stringFloor = floorBox.Text;
             int.TryParse(stringFloor, out floor);
-            if(floor<1 || floor > 100)
+            var washerItem = (ComboBoxItem)washerBox.SelectedItem;
+            if (washerBox.SelectedIndex == 0)
+                washerAvailability = true;
+            else
+                washerAvailability = false;
+            var stoveTypeItem = (ComboBoxItem)stoveTypeBox.SelectedItem;
+            if (stoveTypeItem.Content.ToString() == "Gas")
+                stoveType = StoveTypes.Gas;
+            else
+                stoveType = StoveTypes.Electric;
+            if (floor<1 || floor > 100)
             {
                 string message = "Floor entered incorrectly";
                 string caption = "Error";
@@ -57,7 +75,7 @@ namespace UserInterface
             {
                 unfilledRooms = numberOfRooms;
                 rooms = new Room[numberOfRooms];
-                var roomWindow = new CreateRoomWindow(this,0);
+                var roomWindow = new CreateRoomWindow(mainWindow,this,0);
                 roomWindow.Show();
             }
 
@@ -67,5 +85,17 @@ namespace UserInterface
         {
             e.Handled = !(Char.IsDigit(e.Text, 0));
         }
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            mainWindow.Show();
+        }
+
+        private void showMain_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            mainWindow.Show();
+        }
+
     }
 }

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Flats
 {
-    class OneRoomFlat : Flat
+    public class OneRoomFlat : Flat
     {
-        public OneRoomFlat(int numberOfRooms, Room[] rooms, int floor) : base(numberOfRooms, rooms, floor)
+        public OneRoomFlat(int numberOfRooms, Room[] rooms, int floor, bool washerAvailability,
+            StoveTypes stoveType) : base(numberOfRooms, rooms, floor, washerAvailability, stoveType)
         {
 
         }
@@ -24,7 +25,12 @@ namespace Flats
         }
         public override string ToString()
         {
-            return $"One room flat;rent:{FlatRent};floor:{Floor}.";
+            string washer;
+            if (WasherAvailability == true)
+                washer = "Yes";
+            else
+                washer = "No";
+            return $"One-room flat; Rent:{Math.Round(FlatRent, 1)}; Floor:{Floor}; Washer:{washer}; Stove type:{StoveType}";
         }
     }
 }

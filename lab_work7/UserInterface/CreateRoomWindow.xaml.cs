@@ -20,15 +20,17 @@ namespace UserInterface
     /// </summary>
     public partial class CreateRoomWindow : Window
     {
+        public MainWindow mainWindow;
         public AddWindow addWindow;
         public int currentRoom;
         public CreateRoomWindow()
         {
             InitializeComponent();
         }
-        public CreateRoomWindow(AddWindow addWindow,int currentRoom)
+        public CreateRoomWindow(MainWindow mainWindow,AddWindow addWindow,int currentRoom)
         {
             InitializeComponent();
+            this.mainWindow = mainWindow;
             this.addWindow = addWindow;
             this.currentRoom = currentRoom;
             fillingLabel.Content = $"Fill room №{currentRoom+1}";
@@ -44,12 +46,13 @@ namespace UserInterface
                 currentRoom++;
                 if (addWindow.unfilledRooms != 0)
                 {
-                    var roomWindow = new CreateRoomWindow(addWindow, currentRoom);
+                    var roomWindow = new CreateRoomWindow(mainWindow,addWindow, currentRoom);
                     roomWindow.Show();
                 }
                 else
                 {
                     createFlat();
+                    mainWindow.Show();
                     addWindow.Close();
                 }
                 this.Close();
@@ -61,6 +64,7 @@ namespace UserInterface
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBox.Show(message, caption, button, icon);
+                mainWindow.Show();
                 this.Close();
             }
         }
@@ -85,19 +89,7 @@ namespace UserInterface
                 isFurniture = true;
             else
                 isFurniture = false;
-            var washeItem = (ComboBoxItem)washerBox.SelectedItem;
-            bool isWasher;
-            if (washeItem.Content.ToString() == "Yes")
-                isWasher = true;
-            else
-                isWasher = false;
-            var stoveItem = (ComboBoxItem)stoveTypeBox.SelectedItem;
-            StoveTypes stoveType;
-            if (stoveItem.Content.ToString() == "Gas")
-                stoveType = StoveTypes.Gas;
-            else
-                stoveType = StoveTypes.Electric;
-            room = new Room(square, height, numberOfWindows, isFurniture, isWasher, stoveType);
+            room = new Room(square, height, numberOfWindows, isFurniture);
             return isCorrect;
         }
         private void createFlat()
@@ -107,7 +99,8 @@ namespace UserInterface
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Information;
                 MessageBox.Show(message, caption, button, icon);
-                FlatCreator.CreateFlat(MainWindow.Flats, addWindow.numberOfRooms, addWindow.rooms, addWindow.floor);
+                FlatCreator.CreateFlat(MainWindow.Flats, addWindow.numberOfRooms, addWindow.rooms,
+                    addWindow.floor,addWindow.washerAvailability,addWindow.stoveType);
         }
 
         private void windowsBox_PreviewTextInput(object sender, TextCompositionEventArgs e)

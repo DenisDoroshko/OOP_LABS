@@ -5,33 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="CreateRoomWindow" Height="508" Width="706" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
+        Title="CreateRoomWindow" Height="420" Width="620" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid Background="#FF4876D8">
-            <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="695" Background="#FF37B0E8">
+            <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="611" Background="#FF37B0E8">
                 <Label x:Name="fillingLabel" Content="Filling the room" Height="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Verdana" Cursor="" Foreground="Black" Background="#FF37B0E8"/>
             </StackPanel>
-            <TextBox x:Name="windowsBox" HorizontalAlignment="Center" Height="31" Margin="298,204,299,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="95" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="windowsBox_PreviewTextInput" MaxLength="2" FontWeight="Bold"/>
-            <Label x:Name="flatTypeLabel" Content="Square" HorizontalAlignment="Left" Margin="83,105,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="flatTypeLabel_Copy" Content="Furniture availability" HorizontalAlignment="Left" Margin="83,252,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold"/>
-            <Button x:Name="addRoomButton" Content="Add" HorizontalAlignment="Left" Margin="298,413,0,0" VerticalAlignment="Top" Width="166" Height="41" FontSize="20" RenderTransformOrigin="0.302,-0.866" Click="addRoomButton_Click" Background="#FF37B0E8" FontWeight="Bold"/>
-            <Label x:Name="flatTypeLabel_Copy1" Content="Number of windows" HorizontalAlignment="Left" Margin="83,200,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="flatTypeLabel_Copy2" Content="Washer availability" HorizontalAlignment="Left" Margin="83,302,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="flatTypeLabel_Copy3" Content="Ceiling Height" HorizontalAlignment="Left" Margin="83,153,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.288,0.527"/>
-            <Label x:Name="flatTypeLabel_Copy4" Content="Stove type" HorizontalAlignment="Left" Margin="83,346,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold"/>
-            <TextBox x:Name="heightBox" HorizontalAlignment="Center" Height="31" Margin="298,157,298,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="heightBox_PreviewTextInput" MaxLength="5" FontWeight="Bold"/>
-            <TextBox x:Name="squareBox" HorizontalAlignment="Center" Height="31" Margin="0,109,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="heightBox_PreviewTextInput" MaxLength="5" FontWeight="Bold"/>
-            <ComboBox x:Name="furnitureBox" HorizontalAlignment="Center" Margin="298,254,228,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="32" FontSize="20" FontWeight="Bold">
+            <TextBox x:Name="windowsBox" HorizontalAlignment="Center" Height="31" Margin="302,204,215,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="94" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="windowsBox_PreviewTextInput" MaxLength="2" FontWeight="Bold"/>
+            <Label x:Name="flatTypeLabel" Content="Square(max 1000)" HorizontalAlignment="Left" Margin="32,105,0,0" VerticalAlignment="Top" Width="261" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="flatTypeLabel_Copy" Content="Furniture availability" HorizontalAlignment="Left" Margin="32,252,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold"/>
+            <Button x:Name="addRoomButton" Content="Add" HorizontalAlignment="Left" Margin="269,312,0,0" VerticalAlignment="Top" Width="170" Height="42" FontSize="20" RenderTransformOrigin="0.302,-0.866" Click="addRoomButton_Click" Background="#FF37B0E8" FontWeight="Bold"/>
+            <Label x:Name="flatTypeLabel_Copy1" Content="Windows number(max 50)" HorizontalAlignment="Left" Margin="32,200,0,0" VerticalAlignment="Top" Width="269" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="flatTypeLabel_Copy3" Content="Ceiling Height(max 10)" HorizontalAlignment="Left" Margin="32,153,0,0" VerticalAlignment="Top" Width="231" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.288,0.527"/>
+            <TextBox x:Name="heightBox" HorizontalAlignment="Center" Height="31" Margin="302,159,213,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="heightBox_PreviewTextInput" MaxLength="5" FontWeight="Bold"/>
+            <TextBox x:Name="squareBox" HorizontalAlignment="Center" Height="31" Margin="302,111,213,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="heightBox_PreviewTextInput" MaxLength="5" FontWeight="Bold"/>
+            <ComboBox x:Name="furnitureBox" HorizontalAlignment="Center" Margin="301,254,213,0" VerticalAlignment="Top" Width="97" SelectedIndex="0" Height="32" FontSize="20" FontWeight="Bold">
                 <ComboBoxItem Content="Yes" Foreground="#FF1AD31A"/>
                 <ComboBoxItem Content="No" Foreground="#FFD32222"/>
-            </ComboBox>
-            <ComboBox x:Name="washerBox" HorizontalAlignment="Center" Margin="298,302,228,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="32" FontSize="20" FontWeight="Bold">
-                <ComboBoxItem Content="Yes" Foreground="#FF1AD31A"/>
-                <ComboBoxItem Content="No" Foreground="#FFD32222"/>
-            </ComboBox>
-            <ComboBox x:Name="stoveTypeBox" HorizontalAlignment="Center" Margin="298,348,228,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="35" FontSize="20" FontWeight="Bold">
-                <ComboBoxItem Content="Gas"/>
-                <ComboBoxItem Content="Electic"/>
             </ComboBox>
         </Grid>
 

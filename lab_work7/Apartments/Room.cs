@@ -6,21 +6,14 @@ using System.Threading.Tasks;
 
 namespace Flats
 {
-    public enum StoveTypes
-    {
-        Gas,
-        Electric
-    }
     public class Room
     {
-        public Room(double square, double ceilingHeight, int numberOfWindows, bool furnitureAvailability, bool washerAvailability, StoveTypes stoveType)
+        public Room(double square, double ceilingHeight, int numberOfWindows, bool furnitureAvailability)
         {
             Square = square;
             CeilingHeight = ceilingHeight;
             NumberOfWindows = numberOfWindows;
             FurnitureAvailability = furnitureAvailability;
-            WasherAvailability = washerAvailability;
-            StoveType = stoveType;
         }
         public Room()
         {
@@ -31,8 +24,6 @@ namespace Flats
         public double Volume { get { return GetVolume(); } }
         public int NumberOfWindows { get; set; }
         public bool FurnitureAvailability { get; set; }
-        public bool WasherAvailability { get; set; }
-        public StoveTypes StoveType { get; set; }
         public double RoomRent { get { return GetRent(); } }
         protected double GetVolume()
         {
@@ -41,6 +32,16 @@ namespace Flats
         protected double GetRent()
         {
             return Volume;
+        }
+        public override string ToString()
+        {
+            string furniture;
+            if (FurnitureAvailability == true)
+                furniture = "Yes";
+            else
+                furniture = "No";
+            return $"Square:{Square}; Height:{CeilingHeight}; Volume:{Volume} Windows number:{NumberOfWindows}" +
+                $" Furniture:{furniture} Rent:{RoomRent}";
         }
 
     }

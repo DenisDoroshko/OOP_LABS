@@ -21,3 +21,11 @@ D:\OOP_labs\lab_work7\UserInterface\obj\Debug\AddWindow.baml
 D:\OOP_labs\lab_work7\UserInterface\obj\Debug\UserInterface.csproj.CopyComplete
 D:\OOP_labs\lab_work7\UserInterface\obj\Debug\CreateRoomWindow.g.cs
 D:\OOP_labs\lab_work7\UserInterface\obj\Debug\CreateRoomWindow.baml
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\ShowWindow.g.cs
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\ShowWindow.baml
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\ShowElectricStoveWindow.g.cs
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\ShowElectricStoveWindow.baml
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\EditSelectedFlatWindow.g.cs
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\EditWindow.g.cs
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\EditSelectedFlatWindow.baml
+D:\OOP_labs\lab_work7\UserInterface\obj\Debug\EditWindow.baml
