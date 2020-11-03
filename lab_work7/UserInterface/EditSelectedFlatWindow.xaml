@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="EditSelectedFlatWindow" Height="420" Width="620" WindowStartupLocation="CenterScreen">
+        Title="EditSelectedFlatWindow" Height="420" Width="620" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -29,7 +29,7 @@
                 <ComboBoxItem Content="No" Foreground="#FFD32222"/>
             </ComboBox>
             <Label x:Name="selectRoomLabel" Content="Select room" HorizontalAlignment="Left" Margin="32,96,0,0" VerticalAlignment="Top" Width="135" FontSize="20" FontWeight="Bold" Height="37"/>
-            <ComboBox x:Name="roomBox" HorizontalAlignment="Center" Margin="169,96,92,0" VerticalAlignment="Top" Width="350" Height="35" FontSize="20" FontWeight="Bold" SelectedIndex="0"/>
+            <ComboBox x:Name="roomBox" HorizontalAlignment="Center" Margin="169,96,92,0" VerticalAlignment="Top" Width="350" Height="35" FontSize="14" FontWeight="Bold" SelectedIndex="0"/>
             <Button x:Name="editButton" Content="Edit" HorizontalAlignment="Center" Margin="243,334,274,0" VerticalAlignment="Top" Width="94" Height="32" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="editButton_Click" BorderBrush="{x:Null}"/>
             <Button x:Name="closeButton" Content="Back" HorizontalAlignment="Center" Margin="367,334,150,0" VerticalAlignment="Top" Width="94" Height="32" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="closeButton_Click" BorderBrush="{x:Null}"/>
         </Grid>

@@ -16,15 +16,31 @@ using Flats;
 namespace UserInterface
 {
     /// <summary>
-    /// Логика взаимодействия для EditSelectedFlatWindow.xaml
+    /// The class representing a window for edit selected flat
     /// </summary>
+    
     public partial class EditSelectedFlatWindow : Window
     {
+        /// <summary>
+        /// Number of the selected flat
+        /// </summary>
+        
         public int selectedFlat;
+
+        /// <summary>
+        /// Creates an instance of the EditSelectedWindow class
+        /// </summary>
+
         public EditSelectedFlatWindow()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Creates an instance of the CreateRoomWindow class
+        /// </summary>
+        /// <param name="selectedFlat">Selected flat</param>
+
         public EditSelectedFlatWindow(int selectedFlat)
         {
             foreach (var room in MainWindow.Flats[selectedFlat].Rooms)
@@ -35,6 +51,13 @@ namespace UserInterface
                 this.selectedFlat = selectedFlat;
             }
         }
+
+        /// <summary>
+        /// Edits selected room
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
             Room room;
@@ -52,6 +75,13 @@ namespace UserInterface
                 MessageBox.Show(message, caption, button, icon);
             }
         }
+
+        /// <summary>
+        /// Gets entered data for room editing 
+        /// </summary>
+        /// <param name="room">Room</param>
+        /// <returns>Value is true if entered data is correct, othewise - false</returns>
+
         private bool GetRoom(out Room room)
         {
             bool isCorrect = true;
@@ -76,6 +106,13 @@ namespace UserInterface
             room = new Room(square, height, numberOfWindows, isFurniture);
             return isCorrect;
         }
+
+        /// <summary>
+        /// Closes the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

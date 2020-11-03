@@ -24,14 +24,9 @@ namespace Flats
         public double Volume { get { return GetVolume(); } }
         public int NumberOfWindows { get; set; }
         public bool FurnitureAvailability { get; set; }
-        public double RoomRent { get { return GetRent(); } }
         protected double GetVolume()
         {
             return Square * CeilingHeight;
-        }
-        protected double GetRent()
-        {
-            return Volume;
         }
         public override string ToString()
         {
@@ -41,7 +36,7 @@ namespace Flats
             else
                 furniture = "No";
             return $"Square:{Square}; Height:{CeilingHeight}; Volume:{Volume} Windows number:{NumberOfWindows}" +
-                $" Furniture:{furniture} Rent:{RoomRent}";
+                $" Furniture:{furniture}";
         }
 
     }

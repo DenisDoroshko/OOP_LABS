@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="AddWindow" Height="500" Width="780" WindowStartupLocation="CenterScreen" Closed="showMain_Closed">
+        Title="AddWindow" Height="500" Width="780" WindowStartupLocation="CenterScreen" Closed="showMain_Closed" ResizeMode="CanMinimize" Icon="icon.png">
     <Grid Margin="0,0,-4,0" Background="#FF4876D8">
         <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="776" Background="#FF37B0E8">
             <Label Content="Adding the flat" Height="98" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Verdana" Cursor="" Foreground="#FF0A0A09"/>

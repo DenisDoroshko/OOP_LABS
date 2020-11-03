@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="EditWindow" Height="500" Width="780" Closed="showMain_clossed" WindowStartupLocation="CenterScreen">
+        Title="EditWindow" Height="500" Width="780" Closed="showMain_clossed" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.png">
     <Grid>
         <Grid Background="#FF4876D8">
             <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="772" Background="#FF37B0E8">

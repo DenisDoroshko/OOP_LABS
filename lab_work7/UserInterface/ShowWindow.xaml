@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="ShowWindow" Height="450" Width="820" Closed="showMain_Closed">
+        Title="ShowWindow" Height="450" Width="820" Closed="showMain_Closed" ResizeMode="CanMinimize" Icon="icon.png">
     <Grid>
         <Grid Margin="0,0,2,0" Background="#FF4876D8">
             <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="810" Background="#FF37B0E8">
@@ -13,7 +13,7 @@
             </StackPanel>
             <Button x:Name="showFlatButton" Content="Show" HorizontalAlignment="Center" Margin="345,185,321,0" VerticalAlignment="Top" Width="144" Click="showFlatButton_Click" Height="40" FontSize="20" FontWeight="Bold" Background="#FF37B0E8"/>
             <Label x:Name="flatTypeLabel" Content="Select flat" HorizontalAlignment="Left" Margin="70,126,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold"/>
-            <ComboBox x:Name="flatBox" HorizontalAlignment="Center" Margin="213,128,229,0" VerticalAlignment="Top" Width="368" Height="35" FontSize="20" FontWeight="Bold" SelectedIndex="0"/>
+            <ComboBox x:Name="flatBox" HorizontalAlignment="Center" Margin="213,128,229,0" VerticalAlignment="Top" Width="368" Height="35" FontSize="14" FontWeight="Bold" SelectedIndex="0"/>
             <Label x:Name="showLabel" Content="" HorizontalAlignment="Left" Margin="70,251,0,0" VerticalAlignment="Top" Width="673" FontSize="15" FontWeight="Bold"/>
             <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Center" Margin="345,369,321,0" VerticalAlignment="Top" Width="144" Height="40" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="backButton_Click" BorderBrush="{x:Null}"/>
         </Grid>

@@ -16,46 +16,70 @@ using System.Windows.Shapes;
 namespace UserInterface
 {
     /// <summary>
-    /// Логика взаимодействия для ShowElectricStoveWindow.xaml
+    /// The class representing a window for showing flats with electric stove
     /// </summary>
+    
     public partial class ShowElectricStoveWindow : Window
     {
+        /// <summary>
+        /// Link to the MainWindow
+        /// </summary>
+        
         public MainWindow mainWindow;
+
+        /// <summary>
+        /// Creates an instance of the ShowElectricStoveWindow class
+        /// </summary>
+        
         public ShowElectricStoveWindow()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Creates an instance of the ShowElectricStoveWindow class
+        /// </summary>
+        /// <param name="mainWindow"></param>
+        
         public ShowElectricStoveWindow(MainWindow mainWindow)
         {
             InitializeComponent();
             this.mainWindow = mainWindow;
         }
 
+        /// <summary>
+        /// Shows the flats with electric stove
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void ShowFlats(object sender, EventArgs e)
         {
-            if (MainWindow.Flats.Count != 0)
+            bool isElecticStove = false;
+            foreach (var flat in MainWindow.Flats)
             {
-                foreach (var flat in MainWindow.Flats)
+                if (flat.StoveType == StoveTypes.Electric)
                 {
-                    if (flat.StoveType == StoveTypes.Electric)
+                    showLabel.Content += $"{flat}\n";
+                    var roomNumber = 1;
+                    foreach (var room in flat.Rooms)
                     {
-                        showLabel.Content += $"{flat}\n";
-                        foreach (var room in flat.Rooms)
-                            showLabel.Content += $"  {room}\n";
+                        showLabel.Content += $"  Room №{roomNumber} {room}\n";
                     }
+                    isElecticStove = true;
                 }
             }
-            else
+            if (isElecticStove == false)
             {
-                string message = "There no flats.";
-                string caption = "Error";
-                MessageBoxButton button = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.Error;
-                MessageBox.Show(message, caption, button, icon);
-                mainWindow.Show();
-                this.Close();
-            }
+                showLabel.Content = "There are no flats with electric stove";
+            }       
         }
+
+        /// <summary>
+        /// Close window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
@@ -63,6 +87,12 @@ namespace UserInterface
             this.Close();
         }
 
+        /// <summary>
+        /// Close window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void ShowMain_Closed(object sender, EventArgs e)
         {
             mainWindow.Show();

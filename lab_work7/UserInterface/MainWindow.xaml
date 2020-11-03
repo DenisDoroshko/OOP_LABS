@@ -1,11 +1,11 @@
-﻿<Window x:Class="UserInterface.MainWindow"
+﻿<Window x:Name="mainWindow" x:Class="UserInterface.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="780" Background="#FF1F76A8" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="500" Width="780" Background="#FF1F76A8" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.png" >
     <Grid Background="#FF4876D8">
         <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="772" Background="#FF37B0E8">
             <Label x:Name="mainLabel" Content="Flat accounting" Height="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Verdana" Cursor="" Foreground="Black"/>
@@ -14,9 +14,9 @@
         <Button x:Name="EditButton" Content="Edit the data" HorizontalAlignment="Center" Margin="269,153,268,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="EditButton_Click" BorderBrush="{x:Null}"/>
         <Button x:Name="ShowButton" Content="Show the data" HorizontalAlignment="Center" Margin="269,206,268,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="ShowButton_Click" BorderBrush="{x:Null}" RenderTransformOrigin="0.302,0.561"/>
         <Button x:Name="AverageButton" Content="Average rent" HorizontalAlignment="Center" Margin="269,259,268,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="AverageButton_Click" BorderBrush="{x:Null}"/>
-        <Button x:Name="QuantityButton" Content="Quantity information" HorizontalAlignment="Center" Margin="269,312,268,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="QuantityButton_Click" BorderBrush="{x:Null}"/>
-        <Button x:Name="StoveFlatsButton" Content="Flats with electric stove" HorizontalAlignment="Center" Margin="269,365,268,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="stoveFlatsButton_Click" BorderBrush="{x:Null}"/>
-        <Button x:Name="StoveFlatsButton_Copy" Content="Exit" HorizontalAlignment="Center" Margin="269,421,268,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="QuantityButton_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="QuantityButton" Content="Quantity information" HorizontalAlignment="Center" Margin="270,311,269,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="QuantityButton_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="StoveFlatsButton" Content="Flats with electric stove" HorizontalAlignment="Center" Margin="270,363,269,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="stoveFlatsButton_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="StoveFlatsButton_Copy" Content="Exit" HorizontalAlignment="Center" Margin="270,414,269,0" VerticalAlignment="Top" Width="235" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="ExitButton_Click" BorderBrush="{x:Null}"/>
 
     </Grid>
 </Window>

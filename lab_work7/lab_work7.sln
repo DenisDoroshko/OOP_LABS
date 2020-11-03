@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flats", "Apartments\Flats.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{DA56DA3B-B3B2-47A2-B57F-010608F57907}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatTests", "FlatTests\FlatTests.csproj", "{A582F33E-8CB3-482D-A7C6-270C38CDD647}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DA56DA3B-B3B2-47A2-B57F-010608F57907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA56DA3B-B3B2-47A2-B57F-010608F57907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA56DA3B-B3B2-47A2-B57F-010608F57907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A582F33E-8CB3-482D-A7C6-270C38CDD647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A582F33E-8CB3-482D-A7C6-270C38CDD647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A582F33E-8CB3-482D-A7C6-270C38CDD647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A582F33E-8CB3-482D-A7C6-270C38CDD647}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

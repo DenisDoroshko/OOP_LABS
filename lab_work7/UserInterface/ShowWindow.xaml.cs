@@ -15,16 +15,37 @@ using System.Windows.Shapes;
 namespace UserInterface
 {
     /// <summary>
-    /// Логика взаимодействия для ShowWindow.xaml
+    /// The class representing a window for showing flats with electric stove
     /// </summary>
+    
     public partial class ShowWindow : Window
     {
+        /// <summary>
+        /// Link to the MainWindow
+        /// </summary>
+        
         public MainWindow mainWindow;
+
+        /// <summary>
+        /// Number of flats
+        /// </summary>
+        
         public int flatsNumber;
+
+        /// <summary>
+        /// Creates an instance of the ShowWindow class
+        /// </summary>
+        
         public ShowWindow()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Creates an instance of the ShowWindow class
+        /// </summary>
+        /// <param name="mainWindow"></param>
+        
         public ShowWindow(MainWindow mainWindow)
         {
             InitializeComponent();
@@ -38,6 +59,12 @@ namespace UserInterface
             }
         }
 
+        /// <summary>
+        /// Shows the selected flat
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void showFlatButton_Click(object sender, RoutedEventArgs e)
         {
             if (flatsNumber != 0)
@@ -55,7 +82,7 @@ namespace UserInterface
             }
             else
             {
-                string message = "No flats.";
+                string message = "There are no flats.";
                 string caption = "Error";
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
@@ -64,12 +91,24 @@ namespace UserInterface
             }
         }
 
+        /// <summary>
+        /// Close window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.Show();
             this.Close();
         }
 
+        /// <summary>
+        /// Close window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void showMain_Closed(object sender, EventArgs e)
         {
             mainWindow.Show();

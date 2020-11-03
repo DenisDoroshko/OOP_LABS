@@ -7,8 +7,23 @@ using System.Threading.Tasks;
 
 namespace Flats
 {
+    /// <summary>
+    /// The class for creating flats
+    /// </summary>
+    
     public class FlatCreator
     {
+        /// <summary>
+        /// Creates and adds a flat to list
+        /// </summary>
+        /// <param name="flats">Flats</param>
+        /// <param name="numberOfRooms">Number of rooms</param>
+        /// <param name="rooms">Rooms of a flat</param>
+        /// <param name="floor">Floor</param>
+        /// <param name="washer">Washer availability</param>
+        /// <param name="stove">Type of stove</param>
+        /// <returns>List of flats</returns>
+        
         public static bool CreateFlat(List<Flat> flats,int numberOfRooms,Room[] rooms,int floor,bool washer,StoveTypes stove)
         {
             bool isCorrect = true;
