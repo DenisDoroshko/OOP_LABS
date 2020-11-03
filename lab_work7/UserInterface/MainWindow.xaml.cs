@@ -55,8 +55,19 @@ namespace UserInterface
 
         private void ShowButton_Click(object sender, RoutedEventArgs e)
         {
-            var showWindow = new ShowWindow(this);
+            if (Flats.Count != 0)
+            {
+                var showWindow = new ShowWindow(this);
             showWindow.Show();
+            }
+            else
+            {
+                string message = "There no flats.";
+                string caption = "Error";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBox.Show(message, caption, button, icon);
+            }
         }
 
         private void AverageButton_Click(object sender, RoutedEventArgs e)
