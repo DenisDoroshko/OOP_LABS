@@ -84,7 +84,7 @@ namespace UserInterface
             if (result == DialogResult.Yes)
             {
                 DateTime date = SelectedDate.Value;
-                DayInformation day = MainForm.Days.Find(x => x.Date == date);
+                DayInformation day = MainForm.Days.Find(x => x.Date.Date == date.Date);
                 MainForm.Days.Remove(day);
                 message = "The day was deleted";
                 caption = "Operation result";

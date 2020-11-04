@@ -51,7 +51,7 @@ namespace UserInterface
         private void ShowButton_Click(object sender, EventArgs e)
         {
             DateTime date = SelectedDate.Value;
-            DayInformation day =  MainForm.Days.Find(x => x.Date == date);
+            DayInformation day =  MainForm.Days.Find(x => x.Date.Date == date.Date);
             numberLabel.Text = "Number of tikets sold:";
             if (day != null)
             {

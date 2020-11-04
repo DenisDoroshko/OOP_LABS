@@ -21,7 +21,7 @@ namespace UserInterface
         /// List of days
         /// </summary>
         
-        public static List<DayInformation> Days;
+        public static List<DayInformation> Days { get; set; }
 
         /// <summary>
         /// Creates an instance of the MainForm class

@@ -133,10 +133,10 @@ namespace UserInterface
             bool isCorrectPeriod;
             DateTime fromDate = fromDatePicker.Value;
             DateTime toDate = toDatePicker.Value;
-            if (DateTime.Compare(fromDate, toDate) != 1)
+            if (fromDate.Date <= toDate)
             {
                 DateTime currentDate = fromDate;
-                while (DateTime.Compare(currentDate, toDate) != 1)
+                while (currentDate.Date <= toDate.Date)
                 {
                     DayInformation day = MainForm.Days.Find(x => x.Date == currentDate);
                     if (day != null)

@@ -11,6 +11,10 @@ using TicketAccounting;
 
 namespace UserInterface
 {
+    /// <summary>
+    /// The class representing a form that implements the interface for ticket adding
+    /// </summary>
+    
     public partial class AddForm : Form
     {
         /// <summary>

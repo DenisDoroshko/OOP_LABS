@@ -4,9 +4,20 @@ using System.Collections.Generic;
 namespace TicketAccounting
 {
     /// <summary>
+    /// The enumeration representing ticket types
+    /// </summary>
+
+    public enum TicketTypes
+    {
+        Parterre,
+        Loggia,
+        Balcony
+    }
+
+    /// <summary>
     /// Class storing day information
     /// </summary>
-    
+
     public class DayInformation
     {
         /// <summary>
@@ -38,13 +49,13 @@ namespace TicketAccounting
             /// Ticket type
             /// </summary>
             /// 
-            public TicketTypes TicketType;
+            public TicketTypes TicketType { get; set; }
 
             /// <summary>
             /// Ticket date
             /// </summary>
 
-            public DateTime Date;
+            public DateTime Date { get; set; }
 
         }
 
@@ -116,8 +127,7 @@ namespace TicketAccounting
             bool dayExistense = false;
             foreach(var day in days)
             {
-                int location = DateTime.Compare(day.Date, ticket.Date);
-                if (location == 0)
+                if (day.Date.Date==ticket.Date.Date)
                 {
                     day.Tickets.Add(ticket);
                     dayExistense = true;

@@ -190,12 +190,12 @@ namespace UserInterface
             // toDatePicker
             // 
             this.toDatePicker.CalendarMonthBackground = System.Drawing.SystemColors.InactiveBorder;
+            this.toDatePicker.Checked = false;
             this.toDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.toDatePicker.Location = new System.Drawing.Point(228, 152);
             this.toDatePicker.Name = "toDatePicker";
             this.toDatePicker.Size = new System.Drawing.Size(200, 20);
             this.toDatePicker.TabIndex = 10;
-            this.toDatePicker.Value = new System.DateTime(2020, 10, 29, 0, 0, 0, 0);
             // 
             // backButton
             // 
@@ -225,12 +225,12 @@ namespace UserInterface
             // fromDatePicker
             // 
             this.fromDatePicker.CalendarMonthBackground = System.Drawing.SystemColors.InactiveBorder;
+            this.fromDatePicker.Checked = false;
             this.fromDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromDatePicker.Location = new System.Drawing.Point(228, 126);
             this.fromDatePicker.Name = "fromDatePicker";
             this.fromDatePicker.Size = new System.Drawing.Size(200, 20);
             this.fromDatePicker.TabIndex = 4;
-            this.fromDatePicker.Value = new System.DateTime(2020, 10, 29, 0, 0, 0, 0);
             // 
             // clearLabel
             // 

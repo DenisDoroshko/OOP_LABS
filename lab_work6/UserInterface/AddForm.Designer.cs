@@ -77,12 +77,12 @@
             // SelectedDate
             // 
             this.SelectedDate.CalendarMonthBackground = System.Drawing.SystemColors.InactiveBorder;
+            this.SelectedDate.Checked = false;
             this.SelectedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.SelectedDate.Location = new System.Drawing.Point(245, 118);
             this.SelectedDate.Name = "SelectedDate";
             this.SelectedDate.Size = new System.Drawing.Size(200, 20);
             this.SelectedDate.TabIndex = 4;
-            this.SelectedDate.Value = new System.DateTime(2020, 10, 29, 0, 0, 0, 0);
             // 
             // BoxTicketType
             // 
