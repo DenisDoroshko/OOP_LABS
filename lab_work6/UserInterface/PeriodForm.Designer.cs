@@ -118,7 +118,7 @@ namespace UserInterface
             // 
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.errorLabel.Location = new System.Drawing.Point(317, 239);
+            this.errorLabel.Location = new System.Drawing.Point(249, 259);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(0, 24);
             this.errorLabel.TabIndex = 18;

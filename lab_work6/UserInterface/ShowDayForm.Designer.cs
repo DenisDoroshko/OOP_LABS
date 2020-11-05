@@ -91,7 +91,7 @@ namespace UserInterface
             // 
             this.numberBalcony.AutoSize = true;
             this.numberBalcony.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberBalcony.Location = new System.Drawing.Point(274, 233);
+            this.numberBalcony.Location = new System.Drawing.Point(373, 233);
             this.numberBalcony.Name = "numberBalcony";
             this.numberBalcony.Size = new System.Drawing.Size(0, 22);
             this.numberBalcony.TabIndex = 12;
@@ -100,7 +100,7 @@ namespace UserInterface
             // 
             this.numberLoggia.AutoSize = true;
             this.numberLoggia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberLoggia.Location = new System.Drawing.Point(274, 202);
+            this.numberLoggia.Location = new System.Drawing.Point(373, 202);
             this.numberLoggia.Name = "numberLoggia";
             this.numberLoggia.Size = new System.Drawing.Size(0, 22);
             this.numberLoggia.TabIndex = 11;
@@ -109,7 +109,7 @@ namespace UserInterface
             // 
             this.numberParterre.AutoSize = true;
             this.numberParterre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberParterre.Location = new System.Drawing.Point(274, 169);
+            this.numberParterre.Location = new System.Drawing.Point(373, 169);
             this.numberParterre.Name = "numberParterre";
             this.numberParterre.Size = new System.Drawing.Size(0, 22);
             this.numberParterre.TabIndex = 10;
@@ -118,7 +118,7 @@ namespace UserInterface
             // 
             this.parterreLabel.AutoSize = true;
             this.parterreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.parterreLabel.Location = new System.Drawing.Point(6, 169);
+            this.parterreLabel.Location = new System.Drawing.Point(54, 169);
             this.parterreLabel.Name = "parterreLabel";
             this.parterreLabel.Size = new System.Drawing.Size(0, 22);
             this.parterreLabel.TabIndex = 9;
@@ -127,7 +127,7 @@ namespace UserInterface
             // 
             this.balconyLabel.AutoSize = true;
             this.balconyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.balconyLabel.Location = new System.Drawing.Point(6, 233);
+            this.balconyLabel.Location = new System.Drawing.Point(54, 233);
             this.balconyLabel.Name = "balconyLabel";
             this.balconyLabel.Size = new System.Drawing.Size(0, 22);
             this.balconyLabel.TabIndex = 8;
@@ -136,7 +136,7 @@ namespace UserInterface
             // 
             this.loggiaLabel.AutoSize = true;
             this.loggiaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loggiaLabel.Location = new System.Drawing.Point(6, 202);
+            this.loggiaLabel.Location = new System.Drawing.Point(54, 202);
             this.loggiaLabel.Name = "loggiaLabel";
             this.loggiaLabel.Size = new System.Drawing.Size(0, 22);
             this.loggiaLabel.TabIndex = 7;
@@ -145,7 +145,7 @@ namespace UserInterface
             // 
             this.numberSold.AutoSize = true;
             this.numberSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberSold.Location = new System.Drawing.Point(274, 138);
+            this.numberSold.Location = new System.Drawing.Point(373, 138);
             this.numberSold.Name = "numberSold";
             this.numberSold.Size = new System.Drawing.Size(0, 22);
             this.numberSold.TabIndex = 6;
@@ -154,7 +154,7 @@ namespace UserInterface
             // 
             this.numberLabel.AutoSize = true;
             this.numberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberLabel.Location = new System.Drawing.Point(6, 138);
+            this.numberLabel.Location = new System.Drawing.Point(54, 138);
             this.numberLabel.Name = "numberLabel";
             this.numberLabel.Size = new System.Drawing.Size(0, 22);
             this.numberLabel.TabIndex = 5;

@@ -180,6 +180,5 @@ namespace UserInterface
         {
             mainForm.Show();
         }
-        
     }
 }
