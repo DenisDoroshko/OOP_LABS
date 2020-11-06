@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
         Title="EditWindow" Height="500" Width="780" Closed="showMain_clossed" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.png">
+    <Window.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid Background="#FF4876D8">
             <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="772" Background="#FF37B0E8">
@@ -25,9 +30,14 @@
                 <ComboBoxItem Content="Gas"/>
                 <ComboBoxItem Content="Electic"/>
             </ComboBox>
-            <ListView x:Name="flatBox" Margin="251,106,53,243" SelectedIndex="0" MinWidth="100">
+            <ListView x:Name="flatBox" Margin="251,106,58,243" SelectedIndex="0" MinWidth="100" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <ListView.View>
                     <GridView>
+                        <GridView.ColumnHeaderContainerStyle>
+                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </Style>
+                        </GridView.ColumnHeaderContainerStyle>
                         <GridViewColumn Width="150" Header="Type" DisplayMemberBinding="{Binding Type}"/>
                         <GridViewColumn Width="100" Header="Floor" DisplayMemberBinding="{Binding Floor}"/>
                         <GridViewColumn Width="100" Header="Rent" DisplayMemberBinding="{Binding Rent}"/>

@@ -46,7 +46,7 @@ namespace Flats
                 result += room.Volume;
             }
             result = result * 2.5 + Math.Pow(Floor, -1) * 100;
-            return result;
+            return Math.Round(result, 1);
         }
 
         /// <summary>
