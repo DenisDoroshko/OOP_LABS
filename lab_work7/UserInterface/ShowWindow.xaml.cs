@@ -14,10 +14,25 @@ using System.Windows.Shapes;
 
 namespace UserInterface
 {
+    public class FlatItem
+    {
+        public FlatItem(string type, int floor,double rent,double square)
+        {
+            Type = type;
+            Floor = floor;
+            Rent = rent;
+            Square = square;
+        }
+        public string Type { get; set; }
+        public int Floor { get; set; }
+        public double Rent { get; set; }
+        public double Square { get; set; }
+    }
+
     /// <summary>
     /// The class representing a window for showing flats with electric stove
     /// </summary>
-    
+
     public partial class ShowWindow : Window
     {
         /// <summary>
@@ -53,9 +68,7 @@ namespace UserInterface
             flatsNumber = MainWindow.Flats.Count;
             foreach (var flat in MainWindow.Flats)
             {
-                var item = new ComboBoxItem();
-                item.Content = flat.ToString();
-                flatBox.Items.Add(item);
+                flatBox.Items.Add(new FlatItem(flat.FlatType,flat.Floor,flat.FlatRent,flat.Square));
             }
         }
 
@@ -69,10 +82,8 @@ namespace UserInterface
         {
             if (flatsNumber != 0)
             {
-                var flatItem = (ComboBoxItem)flatBox.SelectedItem;
                 int selectedIndex = flatBox.SelectedIndex;
-                string flat = flatItem.Content.ToString();
-                showLabel.Content = flat;
+                showLabel.Content = MainWindow.Flats[selectedIndex].ToString();
                 var roomNumber=1;
                 foreach(var room in MainWindow.Flats[selectedIndex].Rooms)
                 {

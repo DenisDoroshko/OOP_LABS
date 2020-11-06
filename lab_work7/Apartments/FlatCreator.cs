@@ -24,31 +24,30 @@ namespace Flats
         /// <param name="stove">Type of stove</param>
         /// <returns>List of flats</returns>
         
-        public static bool CreateFlat(List<Flat> flats,int numberOfRooms,Room[] rooms,int floor,bool washer,StoveTypes stove)
+        public static Flat CreateFlat(int numberOfRooms,Room[] rooms,int floor,bool washer,StoveTypes stove)
         {
-            bool isCorrect = true;
+            Flat flat = null;
             switch (numberOfRooms) 
             {
                 case 1:
-                    flats.Add(new OneRoomFlat(numberOfRooms, rooms, floor,washer,stove));
+                    flat =new OneRoomFlat(numberOfRooms, rooms, floor,washer,stove);
                     break;
                 case 2:
-                    flats.Add(new TwoRoomFlat(numberOfRooms, rooms, floor, washer, stove));
+                    flat = new TwoRoomFlat(numberOfRooms, rooms, floor, washer, stove);
                     break;
                 case 3:
-                    flats.Add(new ThreeRoomFlat(numberOfRooms, rooms, floor, washer, stove));
+                    flat = new ThreeRoomFlat(numberOfRooms, rooms, floor, washer, stove);
                     break;
                 case 4:
-                    flats.Add(new FourRoomFlat(numberOfRooms, rooms, floor, washer, stove));
+                    flat = new FourRoomFlat(numberOfRooms, rooms, floor, washer, stove);
                     break;
                 case 5:
-                    flats.Add(new FiveRoomFlat(numberOfRooms, rooms, floor, washer, stove));
+                    flat = new FiveRoomFlat(numberOfRooms, rooms, floor, washer, stove);
                     break;
                 default:
-                    isCorrect = false;
                     break;
             }
-            return isCorrect;
+            return flat ;
         }
     }
 }

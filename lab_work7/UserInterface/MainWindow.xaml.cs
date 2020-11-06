@@ -87,7 +87,8 @@ namespace UserInterface
             if (Flats.Count != 0)
             {
                 var showWindow = new ShowWindow(this);
-            showWindow.Show();
+                this.Hide();
+                showWindow.Show();
             }
             else
             {

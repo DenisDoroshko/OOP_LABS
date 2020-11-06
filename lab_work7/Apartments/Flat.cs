@@ -49,6 +49,12 @@ namespace Flats
         }
 
         /// <summary>
+        /// Type of a flat
+        /// </summary>
+        
+        public abstract string FlatType { get;}
+
+        /// <summary>
         /// Number of rooms
         /// </summary>
         

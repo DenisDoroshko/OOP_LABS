@@ -44,6 +44,12 @@ namespace Flats
         }
 
         /// <summary>
+        /// Type of a flat
+        /// </summary>
+
+        public override string FlatType { get { return "Four-room flat"; } }
+
+        /// <summary>
         /// Converts class to string
         /// </summary>
         /// <returns>String representation of a class</returns>

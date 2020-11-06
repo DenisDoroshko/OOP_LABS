@@ -138,13 +138,15 @@ namespace UserInterface
         
         private void createFlat()
         {
-                string message = "The flat was added.";
-                string caption = "Addition result";
-                MessageBoxButton button = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.Information;
-                MessageBox.Show(message, caption, button, icon);
-                FlatCreator.CreateFlat(MainWindow.Flats, addWindow.numberOfRooms, addWindow.rooms,
+            string message = "The flat was added.";
+            string caption = "Addition result";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Information;
+            MessageBox.Show(message, caption, button, icon);  
+            Flat flat = FlatCreator.CreateFlat(addWindow.numberOfRooms, addWindow.rooms,
                     addWindow.floor,addWindow.washerAvailability,addWindow.stoveType);
+            if (flat != null)
+                MainWindow.Flats.Add(flat);
         }
 
         /// <summary>

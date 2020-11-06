@@ -54,9 +54,7 @@ namespace UserInterface
             flatsNumber = MainWindow.Flats.Count;
             foreach (var flat in MainWindow.Flats)
             {
-                var item = new ComboBoxItem();
-                item.Content = flat.ToString();
-                flatBox.Items.Add(item);
+                flatBox.Items.Add(new FlatItem(flat.FlatType, flat.Floor, flat.FlatRent, flat.Square));
             }
         }
 
@@ -90,7 +88,7 @@ namespace UserInterface
             }
             MainWindow.Flats[selectedIndex].WasherAvailability = washerAvailability;
             MainWindow.Flats[selectedIndex].StoveType = stoveType;
-            var editWindow = new EditSelectedFlatWindow();
+            var editWindow = new EditSelectedFlatWindow(selectedIndex);
             editWindow.Show();
         }
 

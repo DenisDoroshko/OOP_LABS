@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -43,13 +44,17 @@ namespace UserInterface
 
         public EditSelectedFlatWindow(int selectedFlat)
         {
+            InitializeComponent();
+            int roomNumber = 1;
             foreach (var room in MainWindow.Flats[selectedFlat].Rooms)
             {
                 var item = new ComboBoxItem();
-                item.Content = room.ToString();
+                item.Content = roomNumber;
                 roomBox.Items.Add(item);
-                this.selectedFlat = selectedFlat;
+                roomNumber++;
             }
+           
+            this.selectedFlat = selectedFlat;
         }
 
         /// <summary>
@@ -65,6 +70,11 @@ namespace UserInterface
             {
                 int roomNumber = roomBox.SelectedIndex;
                 MainWindow.Flats[selectedFlat].Rooms[roomNumber] = room;
+                string message = "Room was edited.";
+                string caption = "Edition result";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Information;
+                MessageBox.Show(message, caption, button, icon);
             }
             else
             {

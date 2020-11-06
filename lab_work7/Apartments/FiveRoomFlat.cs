@@ -28,6 +28,12 @@ namespace Flats
         }
 
         /// <summary>
+        /// Type of a flat
+        /// </summary>
+
+        public override string FlatType { get { return "Five-room flat"; } }
+
+        /// <summary>
         /// Gets rent of the flat
         /// </summary>
         /// <returns>Rent of the flat</returns>

@@ -11,21 +11,30 @@
             <StackPanel HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="772" Background="#FF37B0E8">
                 <Label x:Name="edingLabel" Content="The eding of the flats" Height="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" FontFamily="Verdana" Cursor="" Foreground="Black"/>
             </StackPanel>
-            <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Center" Margin="332,408,307,0" VerticalAlignment="Top" Width="133" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="backButton_Click" BorderBrush="{x:Null}"/>
-            <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Center" Margin="361,290,307,0" VerticalAlignment="Top" Width="104" Height="33" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="deleteFlatButton_Click" BorderBrush="{x:Null}"/>
-            <Button x:Name="SelectButton" Content="Select" HorizontalAlignment="Center" Margin="250,290,418,0" VerticalAlignment="Top" Width="104" Height="33" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="selectButton_Click" BorderBrush="{x:Null}" RenderTransformOrigin="0.523,0.18"/>
-            <Label x:Name="flatTypeLabel" Content="Select flat" HorizontalAlignment="Left" Margin="15,126,0,0" VerticalAlignment="Top" Width="117" FontSize="20" FontWeight="Bold"/>
-            <ComboBox x:Name="flatBox" HorizontalAlignment="Center" Margin="150,126,272,0" VerticalAlignment="Top" Width="350" Height="35" FontSize="20" FontWeight="Bold" SelectedIndex="0"/>
-            <Label x:Name="washerLabel" Content="Washer availability" HorizontalAlignment="Left" Margin="15,168,0,0" VerticalAlignment="Top" Width="234" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="sroveTypeLabel" Content="Stove type" HorizontalAlignment="Left" Margin="15,223,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold"/>
-            <ComboBox x:Name="washerBox" HorizontalAlignment="Center" Margin="249,173,357,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="32" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.82,0.52">
+            <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Center" Margin="299,414,341,0" VerticalAlignment="Top" Width="134" Height="38" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="backButton_Click" BorderBrush="{x:Null}"/>
+            <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Center" Margin="386,370,284,0" VerticalAlignment="Top" Width="104" Height="33" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="deleteFlatButton_Click" BorderBrush="{x:Null}"/>
+            <Button x:Name="SelectButton" Content="Select" HorizontalAlignment="Center" Margin="251,370,419,0" VerticalAlignment="Top" Width="104" Height="33" Background="#FF37B0E8" FontSize="20" FontWeight="Bold" Click="selectButton_Click" BorderBrush="{x:Null}" RenderTransformOrigin="0.523,0.18"/>
+            <Label x:Name="flatTypeLabel" Content="Select flat" HorizontalAlignment="Left" Margin="46,106,0,0" VerticalAlignment="Top" Width="118" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="washerLabel" Content="Washer availability" HorizontalAlignment="Left" Margin="46,252,0,0" VerticalAlignment="Top" Width="234" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="sroveTypeLabel" Content="Stove type" HorizontalAlignment="Left" Margin="46,307,0,0" VerticalAlignment="Top" Width="210" FontSize="20" FontWeight="Bold"/>
+            <ComboBox x:Name="washerBox" HorizontalAlignment="Center" Margin="251,252,357,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="32" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.82,0.52">
                 <ComboBoxItem Content="Yes" Foreground="#FF1AD31A"/>
                 <ComboBoxItem Content="No" Foreground="#FFD32222"/>
             </ComboBox>
-            <ComboBox x:Name="stoveTypeBox" HorizontalAlignment="Center" Margin="250,225,356,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="35" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.777,0.829">
+            <ComboBox x:Name="stoveTypeBox" HorizontalAlignment="Center" Margin="251,310,357,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="34" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.777,0.829">
                 <ComboBoxItem Content="Gas"/>
                 <ComboBoxItem Content="Electic"/>
             </ComboBox>
+            <ListView x:Name="flatBox" Margin="251,106,53,243" SelectedIndex="0" MinWidth="100">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="150" Header="Type" DisplayMemberBinding="{Binding Type}"/>
+                        <GridViewColumn Width="100" Header="Floor" DisplayMemberBinding="{Binding Floor}"/>
+                        <GridViewColumn Width="100" Header="Rent" DisplayMemberBinding="{Binding Rent}"/>
+                        <GridViewColumn Width="100" Header="Square" DisplayMemberBinding="{Binding Square}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
 
         </Grid>
 
