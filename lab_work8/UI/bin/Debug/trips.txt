@@ -1,0 +1,3 @@
+plane 253 Moscow Paris 250 280 350
+bus 123 Minsk Moscow 50 60
+train 50 Gomel Mogilev 10 15 20 25

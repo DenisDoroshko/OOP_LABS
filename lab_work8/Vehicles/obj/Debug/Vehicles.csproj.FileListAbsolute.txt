@@ -1,0 +1,7 @@
+D:\OOP_labs\lab_work8\Vehicles\bin\Debug\Vehicles.pdb
+D:\OOP_labs\lab_work8\Vehicles\obj\Debug\Vehicles.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work8\Vehicles\obj\Debug\Vehicles.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work8\Vehicles\obj\Debug\Vehicles.pdb
+D:\OOP_labs\lab_work8\Vehicles\bin\Debug\Vehicles.dll.config
+D:\OOP_labs\lab_work8\Vehicles\bin\Debug\Vehicles.dll
+D:\OOP_labs\lab_work8\Vehicles\obj\Debug\Vehicles.dll
