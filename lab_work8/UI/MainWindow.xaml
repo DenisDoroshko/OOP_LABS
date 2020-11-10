@@ -10,10 +10,11 @@
         <StackPanel HorizontalAlignment="Left" Height="98" VerticalAlignment="Top" Width="792" Background="#FF168D26">
             <Label x:Name="mainLabel" Content="Trips information" Height="97" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.491,0.916" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" OpacityMask="#FF1DC369"/>
         </StackPanel>
-        <Button x:Name="addButton" Content="Add trips" HorizontalAlignment="Center" Margin="275,123,275,0" VerticalAlignment="Top" Width="242" Height="53" FontSize="30" FontWeight="Bold" Click="addButton_Click"/>
-        <Button x:Name="getButton" Content="Get from file" HorizontalAlignment="Center" Margin="275,201,275,0" VerticalAlignment="Top" Width="242" Height="53" FontSize="30" FontWeight="Bold" Click="getButton_Click"/>
-        <Button x:Name="editButton" Content="Edit trips" HorizontalAlignment="Center" Margin="275,281,275,0" VerticalAlignment="Top" Width="242" Height="53" FontSize="30" FontWeight="Bold" Click="editButton_Click"/>
-        <Button x:Name="showButton" Content="Show trips" HorizontalAlignment="Center" Margin="275,359,275,0" VerticalAlignment="Top" Width="242" Height="53" FontSize="30" FontWeight="Bold" Click="showButton_Click"/>
-        <Button x:Name="showPriceButton" Content="Show price" HorizontalAlignment="Center" Margin="275,437,275,0" VerticalAlignment="Top" Width="242" Height="53" FontSize="30" FontWeight="Bold"/>
+        <Button x:Name="addButton" Content="Add trips" HorizontalAlignment="Center" Margin="296,122,296,0" VerticalAlignment="Top" Width="200" Height="44" FontSize="20" FontWeight="Bold" Click="addButton_Click"/>
+        <Button x:Name="getButton" Content="Get from file" HorizontalAlignment="Center" Margin="296,182,296,0" VerticalAlignment="Top" Width="200" Height="46" FontSize="20" FontWeight="Bold" Click="getButton_Click"/>
+        <Button x:Name="editButton" Content="Edit trips" HorizontalAlignment="Center" Margin="296,242,295,0" VerticalAlignment="Top" Width="201" Height="46" FontSize="20" FontWeight="Bold" Click="editButton_Click"/>
+        <Button x:Name="showButton" Content="Show trips" HorizontalAlignment="Center" Margin="296,308,295,0" VerticalAlignment="Top" Width="201" Height="46" FontSize="20" FontWeight="Bold" Click="showButton_Click"/>
+        <Button x:Name="showPriceButton" Content="Show price" HorizontalAlignment="Center" Margin="296,374,295,0" VerticalAlignment="Top" Width="201" Height="46" FontSize="20" FontWeight="Bold" Click="showPriceButton_Click"/>
+        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Center" Margin="296,441,295,0" VerticalAlignment="Top" Width="201" Height="46" FontSize="20" FontWeight="Bold" Click="exitButton_Click"/>
     </Grid>
 </Window>

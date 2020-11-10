@@ -27,3 +27,7 @@ D:\OOP_labs\lab_work8\UI\obj\Debug\EditWindow.g.cs
 D:\OOP_labs\lab_work8\UI\obj\Debug\EditWindow.baml
 D:\OOP_labs\lab_work8\UI\obj\Debug\EditTripWindow.g.cs
 D:\OOP_labs\lab_work8\UI\obj\Debug\EditTripWindow.baml
+D:\OOP_labs\lab_work8\UI\obj\Debug\ShowPricesWindow.g.cs
+D:\OOP_labs\lab_work8\UI\obj\Debug\TypePriceWindow.g.cs
+D:\OOP_labs\lab_work8\UI\obj\Debug\ShowPricesWindow.baml
+D:\OOP_labs\lab_work8\UI\obj\Debug\TypePriceWindow.baml

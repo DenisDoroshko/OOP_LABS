@@ -11,14 +11,14 @@
             <StackPanel HorizontalAlignment="Left" Height="98" VerticalAlignment="Top" Width="792" Background="#FF168D26">
                 <Label x:Name="mainLabel" Content="Trips adding" Height="97" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.491,0.916" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" OpacityMask="#FF1DC369"/>
             </StackPanel>
-            <Button x:Name="star" Content="Back" HorizontalAlignment="Center" Margin="313,422,313,0" VerticalAlignment="Top" Width="166" Height="45" FontSize="20" FontWeight="Bold" Click="closeWindow_Clossed"/>
-            <Label x:Name="selectTransportLabel" Content="Select transport" HorizontalAlignment="Left" Margin="70,173,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Bold"/>
-            <ComboBox x:Name="typeBox" HorizontalAlignment="Center" Margin="313,173,313,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="37" FontSize="20" FontWeight="Bold">
+            <Button x:Name="star" Content="Back" HorizontalAlignment="Center" Margin="314,422,314,0" VerticalAlignment="Top" Width="166" Height="39" FontSize="20" FontWeight="Bold" Click="closeWindow_Clossed"/>
+            <Label x:Name="selectTransportLabel" Content="Select transport" HorizontalAlignment="Left" Margin="100,171,0,0" VerticalAlignment="Top" Width="179" FontSize="20" FontWeight="Bold"/>
+            <ComboBox x:Name="typeBox" HorizontalAlignment="Center" Margin="0,173,0,0" VerticalAlignment="Top" Width="166" SelectedIndex="0" Height="37" FontSize="20" FontWeight="Bold">
                 <ComboBoxItem Content="Plane"/>
                 <ComboBoxItem Content="Bus"/>
                 <ComboBoxItem Content="Train"/>
             </ComboBox>
-            <Button x:Name="SelectButton" Content="Select" HorizontalAlignment="Center" Margin="313,262,313,0" VerticalAlignment="Top" Width="166" Height="45" FontSize="20" FontWeight="Bold" Click="selectButton_Click"/>
+            <Button x:Name="SelectButton" Content="Select" HorizontalAlignment="Center" Margin="314,248,314,0" VerticalAlignment="Top" Width="166" Height="39" FontSize="20" FontWeight="Bold" Click="selectButton_Click"/>
 
         </Grid>
 

@@ -32,12 +32,13 @@ namespace UI
 
         private void getButton_Click(object sender, RoutedEventArgs e)
         {
+            int addedNumber = 0;
             List<string> data = GetData();
             foreach(var stringTrip in data)
             {
                 string[] tripValues = stringTrip.Split();
                 string type = tripValues[0];
-                int tripNumber = 0;
+                int tripNumber;
                 int.TryParse(tripValues[1], out tripNumber);
                 string departure = tripValues[2];
                 string destination = tripValues[3];
@@ -47,11 +48,18 @@ namespace UI
                     stringPrices.Add(tripValues[i]);
                 }
                 int[] prices = ParsePrices(stringPrices);
-                
                 ITransport trip = TripsCreator.CreateTrip(type,tripNumber,departure,destination,prices);
                 if (trip != null)
+                {
                     Trips.Add(trip);
+                    addedNumber++;
+                }
             }
+            string message = $"Trips have been added ({addedNumber})";
+            string caption = "Addition result";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Information;
+            MessageBox.Show(message, caption, button, icon);
         }
         private static List<string> GetData()
         {
@@ -102,6 +110,18 @@ namespace UI
             var editWindow = new EditWindow(this);
             editWindow.Show();
             this.Hide();
+        }
+
+        private void showPriceButton_Click(object sender, RoutedEventArgs e)
+        {
+            var showPrice = new ShowPricesWindow(this);
+            showPrice.Show();
+            this.Hide();
+        }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

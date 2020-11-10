@@ -67,10 +67,16 @@
     <Compile Include="EditWindow.xaml.cs">
       <DependentUpon>EditWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowPricesWindow.xaml.cs">
+      <DependentUpon>ShowPricesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShowTripsWindow.xaml.cs">
       <DependentUpon>ShowTripsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TripInfo.cs" />
+    <Compile Include="TypePriceWindow.xaml.cs">
+      <DependentUpon>TypePriceWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddTripWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,7 +105,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ShowPricesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShowTripsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypePriceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
