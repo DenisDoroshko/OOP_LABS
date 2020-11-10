@@ -1,31 +1,31 @@
-﻿<Window x:Class="UI.EditTripWindow"
+﻿<Window x:Name="editTripWindow" x:Class="UI.EditTripWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="EditTripWindow" Height="550" Width="800" Closed="closeWindow_Click">
+        Title="EditTripWindow" Height="550" Width="800" Closed="closeWindow_Click" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
-        <Grid Background="#FF2DCB3B" Margin="0,0,-2,3">
+        <Grid Background="#FF2DCB3B" Margin="0,0,-2,0">
             <StackPanel HorizontalAlignment="Left" Height="98" VerticalAlignment="Top" Width="792" Background="#FF168D26">
                 <Label x:Name="mainLabel" Content="Trips editing" Height="97" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.491,0.916" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" OpacityMask="#FF1DC369"/>
             </StackPanel>
             <Button x:Name="star" Content="Back" HorizontalAlignment="Center" Margin="234,459,418,0" VerticalAlignment="Top" Width="142" Height="38" FontSize="20" FontWeight="Bold" Click="closeWindow_Click"/>
-            <Label x:Name="numberTripLabel" Content="Select number of the trip" HorizontalAlignment="Left" Margin="41,107,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="numberTripLabel" Content="Select number of the trip" HorizontalAlignment="Left" Margin="26,107,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
             <TextBox x:Name="firstPriceBox" HorizontalAlignment="Center" Height="31" Margin="349,289,349,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="checkTextInput" MaxLength="5" FontWeight="Bold"/>
             <TextBox x:Name="secondPriceBox" HorizontalAlignment="Center" Height="31" Margin="349,333,349,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="checkTextInput" MaxLength="5" FontWeight="Bold"/>
             <TextBox x:Name="thirdPriceBox" HorizontalAlignment="Center" Height="31" Margin="349,376,349,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="checkTextInput" MaxLength="5" FontWeight="Bold"/>
             <TextBox x:Name="fourthPriceBox" HorizontalAlignment="Center" Height="31" Margin="349,420,349,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="checkTextInput" MaxLength="5" FontWeight="Bold"/>
             <Button x:Name="editButton" Content="Edit" HorizontalAlignment="Center" Margin="406,459,238,0" VerticalAlignment="Top" Width="150" Height="38" FontSize="20" FontWeight="Bold" Click="editButton_Click" RenderTransformOrigin="0.03,3"/>
-            <Label x:Name="numberTripLabel_Copy" Content="Select departure" HorizontalAlignment="Left" Margin="41,149,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="destinationLabel" Content="Select destination" HorizontalAlignment="Left" Margin="41,195,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="firstPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="41,283,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="thirdPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="41,370,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="secondPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="41,327,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="ticketsNumberLabel" Content="Enter tickets number" HorizontalAlignment="Left" Margin="41,240,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="numberTripLabel_Copy" Content="Select departure" HorizontalAlignment="Left" Margin="26,149,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="destinationLabel" Content="Select destination" HorizontalAlignment="Left" Margin="26,195,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="firstPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="26,283,0,0" VerticalAlignment="Top" Width="198" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="thirdPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="26,370,0,0" VerticalAlignment="Top" Width="318" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="secondPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="26,327,0,0" VerticalAlignment="Top" Width="198" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="ticketsNumberLabel" Content="Enter tickets number" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
             <Label x:Name="carriageNumberLabel" Content="Select cariage" HorizontalAlignment="Left" Margin="468,240,0,0" VerticalAlignment="Top" Width="234" FontSize="20" FontWeight="Bold"  Visibility="Hidden"/>
-            <Label x:Name="fourthPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="41,414,0,0" VerticalAlignment="Top" Width="245" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="fourthPriceLabel" Content="Enter the price" HorizontalAlignment="Left" Margin="26,414,0,0" VerticalAlignment="Top" Width="307" FontSize="20" FontWeight="Bold"/>
             <TextBox x:Name="destinationBox" HorizontalAlignment="Center" Height="31" Margin="349,201,349,0" TextWrapping="Wrap" Text="Minsk" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" MaxLength="30" FontWeight="Bold"/>
             <TextBox x:Name="departureBox" HorizontalAlignment="Center" Height="31" Margin="349,155,349,0" TextWrapping="Wrap" Text="Gomel" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" MaxLength="30" FontWeight="Bold"/>
             <TextBox x:Name="tripNumberBox" HorizontalAlignment="Center" Height="31" Margin="349,113,349,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="96" FontSize="20" RenderTransformOrigin="0.934,0.971" PreviewTextInput="checkTextInput" MaxLength="5" FontWeight="Bold"/>

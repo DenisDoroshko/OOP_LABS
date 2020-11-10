@@ -6,13 +6,43 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
+    /// <summary>
+    /// The class representing a bus
+    /// </summary>
+    
     public class Bus:GroundVehicle
     {
+        /// <summary>
+        /// Creates an instance of the Bus class
+        /// </summary>
+        /// <param name="transportType">Type of transport</param>
+        /// <param name="tripNumber">Number of trip</param>
+        /// <param name="departure">Departure</param>
+        /// <param name="destination">Destination</param>
+        /// <param name="prices">Prices of tickets</param>
+        
         public Bus(string transportType, int tripNumber, string departure, string destination, int[] prices):base(transportType,tripNumber, departure, destination, prices)
         {
         }
+
+        /// <summary>
+        /// Number of free seats
+        /// </summary>
+        
         private int numberOfFree=30;
+
+        /// <summary>
+        /// Number of free seats
+        /// </summary>
+        
         public override int NumberOfFree { get { return numberOfFree; } set { numberOfFree = value; } }
+
+        /// <summary>
+        /// Indexer that returns the price of a ticket of a given type
+        /// </summary>
+        /// <param name="ticketType">Type of a ticket</param>
+        /// <returns>Price of a ticket</returns>
+        
         public override int this[string ticketType]
         {
             get
@@ -37,6 +67,12 @@ namespace Vehicles
                 }
             }
         }
+
+        /// <summary>
+        /// Returns information about trip
+        /// </summary>
+        /// <returns>Trip information</returns>
+        
         public override string GetInfo()
         {
             return $"Type:{TransportType} Trip number:{tripNumber} Departure:{Departure} Destination:{Destination} " +

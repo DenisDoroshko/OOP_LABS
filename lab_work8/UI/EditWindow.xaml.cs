@@ -15,11 +15,21 @@ using System.Windows.Shapes;
 namespace UI
 {
     /// <summary>
-    /// Логика взаимодействия для EditWindow.xaml
+    /// The class representing a window for editing a trip
     /// </summary>
+
     public partial class EditWindow : Window
     {
+        /// <summary>
+        /// Link to the MainWIndow
+        /// </summary>
+
         public MainWindow MainWindow { get; set; }
+
+        /// <summary>
+        /// Creates an instance of the EditWindow class
+        /// </summary>
+        /// <param name="mainWindow">Link to the MainWindow</param>
 
         public EditWindow(MainWindow mainWindow)
         {
@@ -31,13 +41,12 @@ namespace UI
                 tripsBox.Items.Add(tripInfo);
             }
         }
-
-        private void closeWindow_Closed(object sender, EventArgs e)
-        {
-            MainWindow.Show();
-            this.Close();
-        }
-
+        /// <summary>
+        /// Creates window for trip editing by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
             int selectedIndex = tripsBox.SelectedIndex;
@@ -45,6 +54,12 @@ namespace UI
             editWindow.Show();
         }
 
+        /// <summary>
+        /// Deletes selected trip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
             int selectedIndex = tripsBox.SelectedIndex;
@@ -53,9 +68,27 @@ namespace UI
             this.Close();
         }
 
+        /// <summary>
+        /// Deletes all trips
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void deleteAllButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.Trips.Clear();
+            MainWindow.Show();
+            this.Close();
+        }
+
+        /// <summary>
+        /// Closes this window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void closeWindow_Closed(object sender, EventArgs e)
+        {
             MainWindow.Show();
             this.Close();
         }

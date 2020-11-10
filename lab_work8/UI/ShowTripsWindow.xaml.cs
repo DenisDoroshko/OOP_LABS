@@ -15,11 +15,21 @@ using System.Windows.Shapes;
 namespace UI
 {
     /// <summary>
-    /// Логика взаимодействия для ShowTripsWindow.xaml
+    /// The class representing a window for trips showing
     /// </summary>
+
     public partial class ShowTripsWindow : Window
     {
+        /// <summary>
+        /// Link to the MainWIndow
+        /// </summary>
+
         public MainWindow MainWindow { get; set; }
+
+        /// <summary>
+        /// Creates an instance of the ShowTripsWindow class
+        /// </summary>
+        /// <param name="mainWindow">Link to the MainWindow</param>
 
         public ShowTripsWindow(MainWindow mainWindow)
         {
@@ -31,6 +41,12 @@ namespace UI
                 showTable.Items.Add(tripInfo);
             }
         }
+
+        /// <summary>
+        /// Closes this window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void closeWindow_Click(object sender, EventArgs e)
         {

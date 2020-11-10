@@ -19,17 +19,33 @@ using Vehicles;
 namespace UI
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// The class representing a window for menu of aplication
     /// </summary>
+
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// List of trips
+        /// </summary>
+        
         public static List<ITransport> Trips { get; set; }
+
+        /// <summary>
+        /// /// Creates an instance of the MainWindow class
+        /// </summary>
+        
         public MainWindow()
         {
             InitializeComponent();
             Trips = new List<ITransport>();
         }
 
+        /// <summary>
+        /// Gets trips from the file by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void getButton_Click(object sender, RoutedEventArgs e)
         {
             int addedNumber = 0;
@@ -61,6 +77,12 @@ namespace UI
             MessageBoxImage icon = MessageBoxImage.Information;
             MessageBox.Show(message, caption, button, icon);
         }
+
+        /// <summary>
+        /// Gets data
+        /// </summary>
+        /// <returns>Data</returns>
+        
         private static List<string> GetData()
         {
             List<string> data = new List<string>();
@@ -73,6 +95,13 @@ namespace UI
             }
             return data;
         }
+
+        /// <summary>
+        /// Gets prices of tickets
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns>Prices of tickets</returns>
+        
         static int[] ParsePrices(List<string> values)
         {
             List<int> pricesList = new List<int>();
@@ -91,6 +120,12 @@ namespace UI
             return points;
         }
 
+        /// <summary>
+        /// Shows trips by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void showButton_Click(object sender, RoutedEventArgs e)
         {
             var showWindow = new ShowTripsWindow(this);
@@ -98,6 +133,12 @@ namespace UI
             this.Hide();
         }
 
+        /// <summary>
+        /// Creates a window for trip adding by clicking the button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             var addWindow = new AddWindow(this);
@@ -105,6 +146,12 @@ namespace UI
             this.Hide();
         }
 
+        /// <summary>
+        /// Creates a window for trip editing by clicking the button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
             var editWindow = new EditWindow(this);
@@ -112,6 +159,12 @@ namespace UI
             this.Hide();
         }
 
+        /// <summary>
+        /// Shows selected prices of tickets
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void showPriceButton_Click(object sender, RoutedEventArgs e)
         {
             var showPrice = new ShowPricesWindow(this);
@@ -119,6 +172,12 @@ namespace UI
             this.Hide();
         }
 
+        /// <summary>
+        /// Closes the window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

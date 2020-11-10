@@ -50,7 +50,6 @@
     <Compile Include="GroundVehicle.cs" />
     <Compile Include="ITransport.cs" />
     <Compile Include="Plane.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Train.cs" />
     <Compile Include="TripsCreator.cs" />

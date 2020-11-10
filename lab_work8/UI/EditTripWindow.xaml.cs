@@ -16,12 +16,28 @@ using Vehicles;
 namespace UI
 {
     /// <summary>
-    /// Логика взаимодействия для EditTripWindow.xaml
+    /// The class representing a window for editing a trip
     /// </summary>
+    
     public partial class EditTripWindow : Window
     {
+        /// <summary>
+        /// Type of a transport
+        /// </summary>
+        
         int TransportType { get; set; }
+
+        /// <summary>
+        /// Selected trip
+        /// </summary>
+        
         ITransport Trip { get; set; }
+
+        /// <summary>
+        /// Creates window for trip editing
+        /// </summary>
+        /// <param name="trip"></param>
+        
         public EditTripWindow(ITransport trip)
         {
             InitializeComponent();
@@ -80,6 +96,11 @@ namespace UI
                     break;
             }
         }
+
+        /// <summary>
+        /// Checks inputed symbols
+        /// </summary>
+
         private void checkTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !(Char.IsDigit(e.Text, 0));
@@ -98,9 +119,7 @@ namespace UI
             {
                 int carriageNumber;
                 int.TryParse(carriageBox.Text, out carriageNumber);
-                Train train = (Train)Trip;
-                train.numbersOfFree[carriageNumber] = ticketsNumber;
-                Trip = train;
+                ((Train)Trip).numbersOfFree[carriageNumber]=ticketsNumber;
             }
             Trip.TripNumber = tripNumber;
             Trip.Departure = departure;
@@ -114,6 +133,12 @@ namespace UI
             MessageBox.Show(message, caption, button, icon);
             this.Close();
         }
+
+        /// <summary>
+        /// Gets inputed prices
+        /// </summary>
+        /// <returns>Prices</returns>
+        
         private int[] GetPrices()
         {
             int[] prices = null;
@@ -140,6 +165,13 @@ namespace UI
             }
             return prices;
         }
+
+        /// <summary>
+        /// Closes this window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void closeWindow_Click(object sender, EventArgs e)
         {
             this.Close();

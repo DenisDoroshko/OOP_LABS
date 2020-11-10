@@ -16,14 +16,43 @@ using Vehicles;
 namespace UI
 {
     /// <summary>
-    /// Логика взаимодействия для AddTripWindow.xaml
+    /// The class representing a window for adding a trip
     /// </summary>
+    
     public partial class AddTripWindow : Window
     {
+        /// <summary>
+        /// Selected transport
+        /// </summary>
+        
         string SelectedTransport { get; set; }
+
+        /// <summary>
+        /// Index of selected transport
+        /// </summary>
+        
         int SelectedIndex { get; set; }
+
+        /// <summary>
+        /// Link to the MainWIndow
+        /// </summary>
+        
         MainWindow MainWindow { get; set; }
+
+        /// <summary>
+        /// Link to the parentWindow
+        /// </summary>
+        
         AddWindow ParentWindow { get; set; }
+
+        /// <summary>
+        /// Creates an instance of the AddTripWindow class
+        /// </summary>
+        /// <param name="selectedTransport">Selected transport</param>
+        /// <param name="selectedIndex">Index of selected transport</param>
+        /// <param name="mainWindow">Link to the MainWIndow</param>
+        /// <param name="parentWindow">Link to the parentWindow</param>
+        
         public AddTripWindow(string selectedTransport,int selectedIndex,MainWindow mainWindow,AddWindow parentWindow)
         {
             InitializeComponent();
@@ -58,11 +87,24 @@ namespace UI
                     break;
             }
         }
+
+        /// <summary>
+        /// Checks inputed symbols
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void checkTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !(Char.IsDigit(e.Text, 0));
         }
 
+        /// <summary>
+        /// Adds a tripb by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             int ticketsNumber;
@@ -79,11 +121,9 @@ namespace UI
                 {
                     int carriagesNumber;
                     int.TryParse(carriagesNumberBox.Text, out carriagesNumber);
-                    Train train = (Train)trip;
-                    train.numbersOfFree = new int[carriagesNumber];
+                    ((Train)trip).numbersOfFree = new int[carriagesNumber];
                     for(var i=0; i<carriagesNumber;i++)
-                        train.numbersOfFree[i] = ticketsNumber;
-                    trip = train;
+                        ((Train)trip).numbersOfFree[i] = ticketsNumber;
                 }
                 trip.NumberOfFree = ticketsNumber;
                 MainWindow.Trips.Add(trip);
@@ -106,6 +146,11 @@ namespace UI
             this.Close();
         }
 
+        /// <summary>
+        /// Gets inputed prices
+        /// </summary>
+        /// <returns>Prices</returns>
+        
         private int[] GetPrices()
         {
             int[] prices = null;
@@ -132,6 +177,13 @@ namespace UI
             }
             return prices;
         }
+
+        /// <summary>
+        /// Closes this window by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void closeWindow_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
