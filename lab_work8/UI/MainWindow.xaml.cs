@@ -71,11 +71,22 @@ namespace UI
                     addedNumber++;
                 }
             }
-            string message = $"Trips have been added ({addedNumber})";
-            string caption = "Addition result";
-            MessageBoxButton button = MessageBoxButton.OK;
-            MessageBoxImage icon = MessageBoxImage.Information;
-            MessageBox.Show(message, caption, button, icon);
+            if (addedNumber != 0)
+            {
+                string message = $"Trips have been added ({addedNumber})";
+                string caption = "Addition result";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Information;
+                MessageBox.Show(message, caption, button, icon);
+            }
+            else
+            {
+                string message = "Trips haven't been added.";
+                string caption = "Error";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBox.Show(message, caption, button, icon);
+            }
         }
 
         /// <summary>
@@ -128,9 +139,20 @@ namespace UI
         
         private void showButton_Click(object sender, RoutedEventArgs e)
         {
-            var showWindow = new ShowTripsWindow(this);
-            showWindow.Show();
-            this.Hide();
+            if (Trips.Count != 0)
+            {
+                var showWindow = new ShowTripsWindow(this);
+                showWindow.Show();
+                this.Hide();
+            }
+            else
+            {
+                string message = "There are no trips.";
+                string caption = "Error";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBox.Show(message, caption, button, icon);
+            }
         }
 
         /// <summary>
@@ -154,9 +176,20 @@ namespace UI
         
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            var editWindow = new EditWindow(this);
-            editWindow.Show();
-            this.Hide();
+            if (Trips.Count != 0)
+            {
+                var editWindow = new EditWindow(this);
+                editWindow.Show();
+                this.Hide();
+            }
+            else
+            {
+                string message = "There are no trips.";
+                string caption = "Error";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBox.Show(message, caption, button, icon);
+            }
         }
 
         /// <summary>
@@ -167,9 +200,20 @@ namespace UI
         
         private void showPriceButton_Click(object sender, RoutedEventArgs e)
         {
-            var showPrice = new ShowPricesWindow(this);
-            showPrice.Show();
-            this.Hide();
+            if (Trips.Count != 0)
+            {
+                var showPrice = new ShowPricesWindow(this);
+                showPrice.Show();
+                this.Hide();
+            }
+            else
+            {
+                string message = "There are no trips.";
+                string caption = "Error";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBox.Show(message, caption, button, icon);
+            }
         }
 
         /// <summary>

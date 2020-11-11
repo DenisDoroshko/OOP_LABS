@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="550" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.png">
     <Grid Background="#FF2DCB3B">
         <StackPanel HorizontalAlignment="Left" Height="98" VerticalAlignment="Top" Width="792" Background="#FF168D26">
             <Label x:Name="mainLabel" Content="Trips information" Height="97" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.491,0.916" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" OpacityMask="#FF1DC369"/>

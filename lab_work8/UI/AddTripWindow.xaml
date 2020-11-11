@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="AddTripWindow" Height="545" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="AddTripWindow" Height="545" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.png">
     <Grid>
         <Grid Background="#FF2DCB3B">
             <StackPanel HorizontalAlignment="Left" Height="98" VerticalAlignment="Top" Width="792" Background="#FF168D26">

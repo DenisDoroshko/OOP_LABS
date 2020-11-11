@@ -64,6 +64,11 @@ namespace UI
         {
             int selectedIndex = tripsBox.SelectedIndex;
             MainWindow.Trips.RemoveAt(selectedIndex);
+            string message = "The trip has been deleted.";
+            string caption = "Result of deletion";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Information;
+            MessageBox.Show(message, caption, button, icon);
             MainWindow.Show();
             this.Close();
         }
@@ -77,6 +82,11 @@ namespace UI
         private void deleteAllButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.Trips.Clear();
+            string message = "All trips have been deleted.";
+            string caption = "Result of deletion";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Information;
+            MessageBox.Show(message, caption, button, icon);
             MainWindow.Show();
             this.Close();
         }

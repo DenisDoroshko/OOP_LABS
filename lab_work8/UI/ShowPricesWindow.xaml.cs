@@ -21,7 +21,7 @@ namespace UI
     public partial class ShowPricesWindow : Window
     {
         /// <summary>
-        /// Link to the MainWIndow
+        /// Link to the MainWindow
         /// </summary>
 
         public MainWindow MainWindow { get; set; }

@@ -135,6 +135,7 @@ namespace UI
         
         private void selectButton_Click(object sender, RoutedEventArgs e)
         {
+            bool isFound = false;
             string ticketType = ticketBox.Text.ToLower();
             showTable.Items.Clear();
             foreach(var trip in MainWindow.Trips)
@@ -143,9 +144,24 @@ namespace UI
                 {
                     PriceInfo priceInfo = new PriceInfo(trip.TripNumber,trip.Departure,trip.Destination,trip[ticketType]);
                     showTable.Items.Add(priceInfo);
+                    isFound = true;
                 }
             }
-            showTable.Visibility = Visibility.Visible;
+            if (isFound == true)
+            {
+                showTable.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                string message = "There are no prices.";
+                string caption = "Error";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBox.Show(message, caption, button, icon);
+                ParentWindow.Close();
+                MainWindow.Show();
+                this.Close();
+            }
         }
 
         /// <summary>

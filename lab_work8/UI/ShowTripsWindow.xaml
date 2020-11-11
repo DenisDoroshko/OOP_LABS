@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="ShowTripsWindow" Height="550" Width="800" Closed="closeWindow_Click" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="ShowTripsWindow" Height="550" Width="800" Closed="closeWindow_Click" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.png">
     <Window.Resources>
         <Style TargetType="DataGridCell">
             <Setter Property="TextBlock.TextAlignment" Value="Center" />

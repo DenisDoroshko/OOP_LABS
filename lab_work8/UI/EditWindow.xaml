@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="EditWindow" Height="550" Width="800" Closed="closeWindow_Closed">
+        Title="EditWindow" Height="550" Width="800" Closed="closeWindow_Closed" Icon="icon.png" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment" Value="Center" />
