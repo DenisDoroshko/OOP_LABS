@@ -71,8 +71,18 @@ namespace UserInterface
             }
             if (isElecticStove == false)
             {
-                showLabel.Content = "There are no flats with electric stove";
-            }       
+                string message = "There are no flats with electric stove.";
+                string caption = "Not found";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBox.Show(message, caption, button, icon);
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                scrollViewer.Visibility = Visibility.Visible;
+            }
         }
 
         /// <summary>

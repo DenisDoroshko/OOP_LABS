@@ -68,7 +68,7 @@ namespace UserInterface
             }
             else
             {
-                string message = "There no flats.";
+                string message = "There are no flats.";
                 string caption = "Error";
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
@@ -92,7 +92,7 @@ namespace UserInterface
             }
             else
             {
-                string message = "There no flats.";
+                string message = "There are no flats.";
                 string caption = "Error";
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
@@ -208,8 +208,8 @@ namespace UserInterface
             if (Flats.Count != 0)
             {
                 var stoveWindow = new ShowElectricStoveWindow(this);
-                stoveWindow.Show();
                 this.Hide();
+                stoveWindow.Show();
             }
             else
             {
