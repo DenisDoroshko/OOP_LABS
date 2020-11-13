@@ -86,8 +86,8 @@ namespace Vehicles
 
         public override string GetInfo()
         {
-            return $"Type:{TransportType} Trip number:{tripNumber} Departure:{Departure} Destination:{Destination} " +
-                $"Prices:{prices[0]} {prices[1]} {prices[2]} {prices[3]} Free seats:{NumberOfFree}";
+            return $"{TransportType} {tripNumber} {Departure} {Destination} " +
+                $"{prices[0]} {prices[1]} {prices[2]} {prices[3]}";
 
         }
 

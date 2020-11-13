@@ -67,6 +67,7 @@
     <Compile Include="EditWindow.xaml.cs">
       <DependentUpon>EditWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FileUpdater.cs" />
     <Compile Include="ShowPricesWindow.xaml.cs">
       <DependentUpon>ShowPricesWindow.xaml</DependentUpon>
     </Compile>

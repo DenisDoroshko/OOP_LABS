@@ -1,10 +1,7 @@
 plane 253 Moscow Paris 250 280 350
 bus 123 Minsk Moscow 50 60
 train 50 Gomel Mogilev 10 15 20 25
-bus 52 Brest Pinsk 50 60
 bus 19 Minsk Kiev 100 120
-train 51 Gomel Vitebsk 5 8 11 13
-train 52 Gomel Soligorsk 12 13 14 16
 plane 122 Minsk London 150 165 178
 plane 125 Minsk Harkiv 50 60 95
 plane 126 Rim Los-Angeles 300 320 415

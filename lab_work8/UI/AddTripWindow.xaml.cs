@@ -143,6 +143,7 @@ namespace UI
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBox.Show(message, caption, button, icon);
             }
+            FileUpdater.UpdateFile(MainWindow.Trips);
             this.Close();
         }
 

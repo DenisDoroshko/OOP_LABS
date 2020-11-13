@@ -48,6 +48,7 @@ namespace UI
         
         private void getButton_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow.Trips.Clear();
             int addedNumber = 0;
             List<string> data = GetData();
             foreach(var stringTrip in data)
@@ -87,6 +88,7 @@ namespace UI
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBox.Show(message, caption, button, icon);
             }
+            FileUpdater.UpdateFile(Trips);
         }
 
         /// <summary>
