@@ -1,0 +1,7 @@
+D:\OOP_labs\lab_work9\Exceptions\bin\Debug\Exceptions.dll.config
+D:\OOP_labs\lab_work9\Exceptions\bin\Debug\Exceptions.dll
+D:\OOP_labs\lab_work9\Exceptions\bin\Debug\Exceptions.pdb
+D:\OOP_labs\lab_work9\Exceptions\obj\Debug\Exceptions.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work9\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work9\Exceptions\obj\Debug\Exceptions.dll
+D:\OOP_labs\lab_work9\Exceptions\obj\Debug\Exceptions.pdb

@@ -1,0 +1,7 @@
+D:\OOP_labs\lab_work9\Vectors\bin\Debug\Vectors.pdb
+D:\OOP_labs\lab_work9\Vectors\obj\Debug\Vectors.csprojAssemblyReference.cache
+D:\OOP_labs\lab_work9\Vectors\obj\Debug\Vectors.csproj.CoreCompileInputs.cache
+D:\OOP_labs\lab_work9\Vectors\obj\Debug\Vectors.pdb
+D:\OOP_labs\lab_work9\Vectors\bin\Debug\Vectors.dll.config
+D:\OOP_labs\lab_work9\Vectors\bin\Debug\Vectors.dll
+D:\OOP_labs\lab_work9\Vectors\obj\Debug\Vectors.dll
