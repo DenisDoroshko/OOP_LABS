@@ -18,3 +18,5 @@ D:\OOP_labs\lab_work9\UI\obj\Debug\UI.exe
 D:\OOP_labs\lab_work9\UI\obj\Debug\UI.pdb
 D:\OOP_labs\lab_work9\UI\obj\Debug\UI.ProductForm.resources
 D:\OOP_labs\lab_work9\UI\obj\Debug\UI.SelectForm.resources
+D:\OOP_labs\lab_work9\UI\obj\Debug\UI.EditShowForm.resources
+D:\OOP_labs\lab_work9\UI\obj\Debug\UI.EditForm.resources

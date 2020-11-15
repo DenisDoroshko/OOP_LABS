@@ -12,55 +12,76 @@ using Exceptions;
 
 namespace UI
 {
+    /// <summary>
+    /// The class representing a form for adding a vector
+    /// </summary>
+    
     public partial class AddForm : Form
     {
+        /// <summary>
+        /// Creates an instance of the AddForm class
+        /// </summary>
+        
         public AddForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Adds a vector by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void addButton_Click(object sender, EventArgs e)
         {
-            int coordinateX=0;
-            int coordinateY=0;
-            int coordinateZ=0;
-            bool isCorrect = true;
             try
-            {     
+            {
+                int coordinateX;
+                int coordinateY;
+                int coordinateZ;
                 if (!int.TryParse(xBox.Text, out coordinateX))
-                    isCorrect = false;
-                if (!int.TryParse(xBox.Text, out coordinateX))
-                    isCorrect = false;  
-                if (!int.TryParse(xBox.Text, out coordinateX))
-                    isCorrect = false;
-                if (isCorrect == false)
                     throw new IncorrectValueException("One or more values inputed incorrectly.");
-            }
-            catch(IncorrectValueException exeption)
-            {
-                string errorMessage = "The vector hasn't been added. "+ exeption.Message;
-                string errorCaption = "Addition result";
-                MessageBoxIcon errorIcon = MessageBoxIcon.Error;
-                MessageBoxButtons errorButtons = MessageBoxButtons.OK;
-                MessageBox.Show(errorMessage, errorCaption, errorButtons, errorIcon);
-                this.Close();
-            }
-            if (isCorrect == true)
-            {
+                if (!int.TryParse(yBox.Text, out coordinateY))
+                    throw new IncorrectValueException("One or more values inputed incorrectly.");
+                if (!int.TryParse(zBox.Text, out coordinateZ))
+                    throw new IncorrectValueException("One or more values inputed incorrectly.");
                 Vector vector = new Vector(coordinateX, coordinateY, coordinateZ);
                 MainForm.Vectors.Add(vector);
-                string message = "The vector has been added.";
-                string caption = "Addition result";
-                MessageBoxIcon icon = MessageBoxIcon.Information;
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
-                MessageBox.Show(message, caption, buttons, icon);
-                this.Close();
+                ShowGoodMessage();
             }
+            catch(IncorrectValueException exception)
+            {
+                ShowErrorMessage(exception.Message);
+            }
+            this.Close();
+
         }
 
-        private void backButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Shows a good message
+        /// </summary>
+        
+        private void ShowGoodMessage()
         {
-            this.Close();
+            string message = "The vector has been added.";
+            string caption = "Addition result";
+            MessageBoxIcon icon = MessageBoxIcon.Information;
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            MessageBox.Show(message, caption, buttons, icon);
+        }
+
+        /// <summary>
+        /// Shows a error message
+        /// </summary>
+
+        private void ShowErrorMessage(string message)
+        {
+            string errorMessage = "The vector hasn't been added. " + message;
+            string errorCaption = "Addition result";
+            MessageBoxIcon errorIcon = MessageBoxIcon.Error;
+            MessageBoxButtons errorButtons = MessageBoxButtons.OK;
+            MessageBox.Show(errorMessage, errorCaption, errorButtons, errorIcon);
         }
 
     }

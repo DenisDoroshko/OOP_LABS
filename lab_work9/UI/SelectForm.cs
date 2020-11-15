@@ -12,32 +12,64 @@ using Exceptions;
 
 namespace UI
 {
+    /// <summary>
+    /// The class representing a form for vector multiplication
+    /// </summary>
+
     public partial class SelectForm : Form
     {
+        /// <summary>
+        /// Link to the ProductForm
+        /// </summary>
+        
+        public ProductForm ProductForm { get; set; }
+
+        /// <summary>
+        /// Selected type of product
+        /// </summary>
+        
         public int ProductType { get; set; }
-        public SelectForm(int type)
+
+        /// <summary>
+        /// Creates an instance of the SelectForm class
+        /// </summary>
+        /// <param name="type">Type of a product</param>
+        /// <param name="productForm">Link to the ProductForm</param>
+        
+        public SelectForm(int type, ProductForm productForm)
         {
             InitializeComponent();
             ProductType = type;
+            ProductForm = productForm;
             InitializeBoxes();
             switch (type)
             {
                 case 1:
+                    numberLabel.Visible = true;
                     numberBox.Visible = true;
                     break;
                 case 2:
+                    secondLabel.Visible = true;
                     secondBox.Visible = true;
                     break;
                 case 3:
+                    secondLabel.Visible = true;
                     secondBox.Visible = true;
                     break;
                 case 4:
+                    secondLabel.Visible = true;
                     secondBox.Visible = true;
+                    thirdLabel.Visible = true;
                     thirdBox.Visible = true;
                     break;
             }
 
         }
+
+        /// <summary>
+        /// Initialize boxes
+        /// </summary>
+        
         public void InitializeBoxes()
         {
             foreach (var vector in MainForm.Vectors)
@@ -57,6 +89,12 @@ namespace UI
             thirdBox.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Shows result of multiplication by clicking the button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void selectButton_Click(object sender, EventArgs e)
         {
             Vector firstVector = MainForm.Vectors[firstBox.SelectedIndex];
@@ -70,9 +108,9 @@ namespace UI
             switch (ProductType) 
             { 
                 case 1:
-                    int number=0;
                     try
                     {
+                        int number;
                         if (int.TryParse(numberBox.Text, out number))
                         {
                             Vector numberResult = firstVector * number;
@@ -91,7 +129,6 @@ namespace UI
                         MessageBoxIcon errorIcon = MessageBoxIcon.Error;
                         MessageBoxButtons errorButtons = MessageBoxButtons.OK;
                         MessageBox.Show(errorMessage, errorCaption, errorButtons, errorIcon);
-                        this.Close();
                     }
                     
                     break;
@@ -111,6 +148,18 @@ namespace UI
             }
             if (isCorrect == true)
                 MessageBox.Show(message, caption, buttons, icon);
+        }
+
+        /// <summary>
+        /// Closes a form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            ProductForm.Show();
+            this.Close();
         }
     }
 }

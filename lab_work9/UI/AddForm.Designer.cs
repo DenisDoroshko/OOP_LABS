@@ -35,23 +35,23 @@
             this.yBox = new System.Windows.Forms.TextBox();
             this.zBox = new System.Windows.Forms.TextBox();
             this.xBox = new System.Windows.Forms.TextBox();
-            this.addButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.mainLabel = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.addButton);
             this.panel1.Controls.Add(this.yLabel);
             this.panel1.Controls.Add(this.zLabel);
             this.panel1.Controls.Add(this.xLabel);
             this.panel1.Controls.Add(this.yBox);
             this.panel1.Controls.Add(this.zBox);
             this.panel1.Controls.Add(this.xBox);
-            this.panel1.Controls.Add(this.addButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
@@ -112,20 +112,9 @@
             this.xBox.Size = new System.Drawing.Size(100, 20);
             this.xBox.TabIndex = 4;
             // 
-            // addButton
-            // 
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addButton.Location = new System.Drawing.Point(153, 247);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(139, 34);
-            this.addButton.TabIndex = 1;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
             this.panel2.Controls.Add(this.mainLabel);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -144,12 +133,28 @@
             this.mainLabel.Text = "Vector addition";
             this.mainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.addButton.FlatAppearance.BorderSize = 0;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addButton.Location = new System.Drawing.Point(158, 243);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(139, 34);
+            this.addButton.TabIndex = 10;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddForm";
@@ -166,11 +171,11 @@
         private System.Windows.Forms.TextBox yBox;
         private System.Windows.Forms.TextBox zBox;
         private System.Windows.Forms.TextBox xBox;
-        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label mainLabel;
         private System.Windows.Forms.Label yLabel;
         private System.Windows.Forms.Label zLabel;
         private System.Windows.Forms.Label xLabel;
+        private System.Windows.Forms.Button addButton;
     }
 }

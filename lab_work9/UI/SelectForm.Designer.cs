@@ -38,17 +38,16 @@
             this.secondBox = new System.Windows.Forms.ListBox();
             this.firstBox = new System.Windows.Forms.ListBox();
             this.backButton = new System.Windows.Forms.Button();
-            this.selectButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.mainLabel = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.selectButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.numberBox);
             this.panel1.Controls.Add(this.numberLabel);
             this.panel1.Controls.Add(this.firstLabel);
@@ -152,28 +151,21 @@
             // 
             // backButton
             // 
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backButton.Location = new System.Drawing.Point(142, 355);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(160, 37);
             this.backButton.TabIndex = 9;
             this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
-            // 
-            // selectButton
-            // 
-            this.selectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.selectButton.Location = new System.Drawing.Point(309, 355);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(160, 37);
-            this.selectButton.TabIndex = 3;
-            this.selectButton.Text = "Select";
-            this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
             this.panel2.Controls.Add(this.mainLabel);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -192,13 +184,30 @@
             this.mainLabel.Text = "Data selecting";
             this.mainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // selectButton
+            // 
+            this.selectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.selectButton.FlatAppearance.BorderSize = 0;
+            this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectButton.Location = new System.Drawing.Point(309, 355);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(160, 37);
+            this.selectButton.TabIndex = 3;
+            this.selectButton.Text = "Select";
+            this.selectButton.UseVisualStyleBackColor = false;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "SelectForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -212,10 +221,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox firstBox;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label mainLabel;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ListBox thirdBox;
         private System.Windows.Forms.ListBox secondBox;
         private System.Windows.Forms.TextBox numberBox;
@@ -223,5 +230,6 @@
         private System.Windows.Forms.Label firstLabel;
         private System.Windows.Forms.Label secondLabel;
         private System.Windows.Forms.Label thirdLabel;
+        private System.Windows.Forms.Button selectButton;
     }
 }

@@ -8,7 +8,7 @@ namespace Exceptions
 {
     public class IncorrectValueException : Exception
     {
-        public IncorrectValueException() : base("Введено некорректное значение")
+        public IncorrectValueException() : base("Incorrect value")
         {
         }
         public IncorrectValueException(string message):base(message)
