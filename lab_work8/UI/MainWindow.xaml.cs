@@ -48,30 +48,8 @@ namespace UI
         
         private void getButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.Trips.Clear();
-            int addedNumber = 0;
-            List<string> data = GetData();
-            foreach(var stringTrip in data)
-            {
-                string[] tripValues = stringTrip.Split();
-                string type = tripValues[0];
-                int tripNumber;
-                int.TryParse(tripValues[1], out tripNumber);
-                string departure = tripValues[2];
-                string destination = tripValues[3];
-                List<string> stringPrices = new List<string>();
-                for(var i =4; i < tripValues.Length; i++)
-                {
-                    stringPrices.Add(tripValues[i]);
-                }
-                int[] prices = ParsePrices(stringPrices);
-                ITransport trip = TripsCreator.CreateTrip(type,tripNumber,departure,destination,prices);
-                if (trip != null)
-                {
-                    Trips.Add(trip);
-                    addedNumber++;
-                }
-            }
+            MainWindow.Trips = FileUpdater.GetTrips("trips.txt");
+            int addedNumber = MainWindow.Trips.Count;
             if (addedNumber != 0)
             {
                 string message = $"Trips have been added ({addedNumber})";
@@ -88,7 +66,7 @@ namespace UI
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBox.Show(message, caption, button, icon);
             }
-            FileUpdater.UpdateFile(Trips);
+            FileUpdater.UpdateFile(MainWindow.Trips,"trips.txt");
         }
 
         /// <summary>

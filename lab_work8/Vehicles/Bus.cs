@@ -21,7 +21,7 @@ namespace Vehicles
         /// <param name="destination">Destination</param>
         /// <param name="prices">Prices of tickets</param>
         
-        public Bus(string transportType, int tripNumber, string departure, string destination, int[] prices):base(transportType,tripNumber, departure, destination, prices)
+        public Bus(TransportTypes transportType, int tripNumber, string departure, string destination, int[] prices):base(transportType,tripNumber, departure, destination, prices)
         {
         }
 

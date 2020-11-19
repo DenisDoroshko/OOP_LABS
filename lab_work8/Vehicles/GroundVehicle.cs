@@ -21,7 +21,7 @@ namespace Vehicles
         /// <param name="destination">Destination</param>
         /// <param name="prices">Prices of tickets</param>
         
-        public GroundVehicle(string transportType, int tripNumber, string departure, string destination, int[] prices)
+        public GroundVehicle(TransportTypes transportType, int tripNumber, string departure, string destination, int[] prices)
         {
             TransportType = transportType;
             this.tripNumber = tripNumber;
@@ -87,7 +87,7 @@ namespace Vehicles
         /// Type of a transport
         /// </summary>
         
-        public string TransportType { get; set; }
+        public TransportTypes TransportType { get; set; }
 
         /// <summary>
         /// Returns information about trip

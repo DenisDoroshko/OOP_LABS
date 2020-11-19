@@ -30,21 +30,21 @@ namespace Vehicles
                 ["plane"] = 1,
                 ["bus"] = 2,
                 ["train"] = 3,
- 
+
             };
             int key;
             transportType = transportType.Trim().ToLower();
             transportTypes.TryGetValue(transportType, out key);
-            switch (key) 
+            switch (key)
             {
                 case 1:
-                    trip = new Plane(transportType, tripNumber, departure, destination, prices);
+                    trip = new Plane(TransportTypes.Plane, tripNumber, departure, destination, prices);
                     break;
                 case 2:
-                    trip = new Bus(transportType, tripNumber, departure, destination, prices);
+                    trip = new Bus(TransportTypes.Bus, tripNumber, departure, destination, prices);
                     break;
                 case 3:
-                    trip = new Train(transportType, tripNumber, departure, destination, prices);
+                    trip = new Train(TransportTypes.Train, tripNumber, departure, destination, prices);
                     break;
             }
             return trip;

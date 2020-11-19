@@ -7,6 +7,17 @@ using System.Threading.Tasks;
 namespace Vehicles
 {
     /// <summary>
+    /// Contains transport types
+    /// </summary>
+    
+    public enum TransportTypes 
+    {
+        Plane=1,      
+        Bus=2, 
+        Train=3
+    }
+
+    /// <summary>
     /// Interface for implementing transport classes
     /// </summary>
     
@@ -44,8 +55,8 @@ namespace Vehicles
         /// <summary>
         /// Type of a transport
         /// </summary>
-        
-        string TransportType {get;set;}
+
+        TransportTypes TransportType {get;set;}
 
         /// <summary>
         /// Returns information about trip

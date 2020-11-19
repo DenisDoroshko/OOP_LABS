@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vehicles;
 
 namespace UI
 {
@@ -21,7 +22,7 @@ namespace UI
         /// <param name="numberOfFree">Number of free seats</param>
         /// <param name="prices">Prices</param>
         
-        public TripInfo(string transportType, int tripNumber, string departure, string destination, int numberOfFree, int[] prices)
+        public TripInfo(TransportTypes transportType, int tripNumber, string departure, string destination, int numberOfFree, int[] prices)
         {
             TransportType = transportType;
             TripNumber = tripNumber;
@@ -36,7 +37,7 @@ namespace UI
         /// Type of a transport
         /// </summary>
         
-        public string TransportType { get; set; }
+        public TransportTypes TransportType { get; set; }
 
         /// <summary>
         /// Number of a trip

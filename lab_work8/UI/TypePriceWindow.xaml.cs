@@ -138,9 +138,9 @@ namespace UI
             bool isFound = false;
             string ticketType = ticketBox.Text.ToLower();
             showTable.Items.Clear();
-            foreach(var trip in MainWindow.Trips)
+            foreach (var trip in MainWindow.Trips)
             {
-                if (trip.TransportType == SelectedType)
+                if (trip.TransportType.ToString() == SelectedType)
                 {
                     PriceInfo priceInfo = new PriceInfo(trip.TripNumber,trip.Departure,trip.Destination,trip[ticketType]);
                     showTable.Items.Add(priceInfo);

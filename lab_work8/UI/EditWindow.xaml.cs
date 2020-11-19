@@ -69,7 +69,7 @@ namespace UI
             MessageBoxButton button = MessageBoxButton.OK;
             MessageBoxImage icon = MessageBoxImage.Information;
             MessageBox.Show(message, caption, button, icon);
-            FileUpdater.UpdateFile(MainWindow.Trips);
+            FileUpdater.UpdateFile(MainWindow.Trips, "trips.txt");
             MainWindow.Show();
             this.Close();
         }
@@ -88,7 +88,7 @@ namespace UI
             MessageBoxButton button = MessageBoxButton.OK;
             MessageBoxImage icon = MessageBoxImage.Information;
             MessageBox.Show(message, caption, button, icon);
-            FileUpdater.UpdateFile(MainWindow.Trips);
+            FileUpdater.UpdateFile(MainWindow.Trips, "trips.txt");
             MainWindow.Show();
             this.Close();
         }

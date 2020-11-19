@@ -21,11 +21,6 @@ namespace UI
     
     public partial class EditTripWindow : Window
     {
-        /// <summary>
-        /// Type of a transport
-        /// </summary>
-        
-        int TransportType { get; set; }
 
         /// <summary>
         /// Selected trip
@@ -41,24 +36,15 @@ namespace UI
         public EditTripWindow(ITransport trip)
         {
             InitializeComponent();
-            Dictionary<string, int> transportTypes = new Dictionary<string, int>
-            {
-                ["plane"] = 0,
-                ["bus"] = 1,
-                ["train"] = 2,
-            };
-            int key;
-            transportTypes.TryGetValue(trip.TransportType, out key);
-            TransportType = key;
             Trip = trip;
             tripNumberBox.Text = trip.TripNumber.ToString();
             departureBox.Text = trip.Departure;
             destinationBox.Text = trip.Destination;
             firstPriceBox.Text = trip.Prices[0].ToString();
             secondPriceBox.Text = trip.Prices[1].ToString();
-            switch (key)
+            switch (trip.TransportType)
             {
-                case 0:
+                case TransportTypes.Plane:
                     thirdPriceBox.Text = trip.Prices[2].ToString();
                     ticketsNumberBox.Text = trip.NumberOfFree.ToString();
                     firstPriceLabel.Content = "Edit Economy ticket price";
@@ -67,7 +53,7 @@ namespace UI
                     fourthPriceBox.Visibility = Visibility.Hidden;
                     fourthPriceLabel.Visibility = Visibility.Hidden;
                     break;
-                case 1:
+                case TransportTypes.Bus:
                     ticketsNumberBox.Text = trip.NumberOfFree.ToString();
                     firstPriceLabel.Content = "Edit Hard ticket price";
                     secondPriceLabel.Content = "Edit Soft ticket price";
@@ -76,7 +62,7 @@ namespace UI
                     fourthPriceBox.Visibility = Visibility.Hidden;
                     fourthPriceLabel.Visibility = Visibility.Hidden;
                     break;
-                case 2:
+                case TransportTypes.Train:
                     thirdPriceBox.Text = trip.Prices[2].ToString();
                     fourthPriceBox.Text = trip.Prices[3].ToString();
                     Train train = (Train)trip;
@@ -115,7 +101,7 @@ namespace UI
             string departure = departureBox.Text;
             string destination = destinationBox.Text;
             int[] prices = GetPrices();
-            if (TransportType == 2)
+            if (Trip.TransportType == TransportTypes.Train)
             {
                 int carriageNumber;
                 int.TryParse(carriageBox.Text, out carriageNumber);
@@ -131,6 +117,7 @@ namespace UI
             MessageBoxButton button = MessageBoxButton.OK;
             MessageBoxImage icon = MessageBoxImage.Information;
             MessageBox.Show(message, caption, button, icon);
+            FileUpdater.UpdateFile(MainWindow.Trips, "trips.txt");
             this.Close();
         }
 
@@ -142,20 +129,20 @@ namespace UI
         private int[] GetPrices()
         {
             int[] prices = null;
-            switch (TransportType)
+            switch (Trip.TransportType)
             {
-                case 0:
+                case TransportTypes.Plane:
                     prices = new int[3];
                     int.TryParse(firstPriceBox.Text, out prices[0]);
                     int.TryParse(secondPriceBox.Text, out prices[1]);
                     int.TryParse(thirdPriceBox.Text, out prices[2]);
                     break;
-                case 1:
+                case TransportTypes.Bus:
                     prices = new int[2];
                     int.TryParse(firstPriceBox.Text, out prices[0]);
                     int.TryParse(secondPriceBox.Text, out prices[1]);
                     break;
-                case 2:
+                case TransportTypes.Train:
                     prices = new int[4];
                     int.TryParse(firstPriceBox.Text, out prices[0]);
                     int.TryParse(secondPriceBox.Text, out prices[1]);
