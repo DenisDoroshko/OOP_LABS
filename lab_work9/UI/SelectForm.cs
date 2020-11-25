@@ -161,5 +161,10 @@ namespace UI
             ProductForm.Show();
             this.Close();
         }
+
+        private void SelectForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ProductForm.Show();
+        }
     }
 }

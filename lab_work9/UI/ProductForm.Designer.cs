@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(143)))), ((int)(((byte)(174)))));
             this.panel1.Controls.Add(this.backButton);
             this.panel1.Controls.Add(this.typeLabel);
             this.panel1.Controls.Add(this.mixedRadio);
@@ -60,7 +60,7 @@
             // 
             // backButton
             // 
-            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -128,7 +128,7 @@
             // 
             // selectButton
             // 
-            this.selectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.selectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.selectButton.FlatAppearance.BorderSize = 0;
             this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -142,7 +142,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.panel2.Controls.Add(this.mainLabel);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -151,12 +151,11 @@
             // 
             // mainLabel
             // 
-            this.mainLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLabel.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainLabel.Location = new System.Drawing.Point(0, 0);
             this.mainLabel.Name = "mainLabel";
             this.mainLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mainLabel.Size = new System.Drawing.Size(586, 82);
+            this.mainLabel.Size = new System.Drawing.Size(545, 82);
             this.mainLabel.TabIndex = 0;
             this.mainLabel.Text = "Work with vectors";
             this.mainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

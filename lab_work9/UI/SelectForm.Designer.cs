@@ -38,16 +38,16 @@
             this.secondBox = new System.Windows.Forms.ListBox();
             this.firstBox = new System.Windows.Forms.ListBox();
             this.backButton = new System.Windows.Forms.Button();
+            this.selectButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.mainLabel = new System.Windows.Forms.Label();
-            this.selectButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(143)))), ((int)(((byte)(174)))));
             this.panel1.Controls.Add(this.numberBox);
             this.panel1.Controls.Add(this.numberLabel);
             this.panel1.Controls.Add(this.firstLabel);
@@ -66,6 +66,7 @@
             // 
             // numberBox
             // 
+            this.numberBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.numberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numberBox.Location = new System.Drawing.Point(441, 102);
             this.numberBox.MaxLength = 10;
@@ -119,6 +120,7 @@
             // 
             // thirdBox
             // 
+            this.thirdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.thirdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.thirdBox.FormattingEnabled = true;
             this.thirdBox.ItemHeight = 16;
@@ -130,6 +132,7 @@
             // 
             // secondBox
             // 
+            this.secondBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.secondBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.secondBox.FormattingEnabled = true;
             this.secondBox.ItemHeight = 16;
@@ -141,6 +144,7 @@
             // 
             // firstBox
             // 
+            this.firstBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.firstBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firstBox.FormattingEnabled = true;
             this.firstBox.ItemHeight = 16;
@@ -151,7 +155,7 @@
             // 
             // backButton
             // 
-            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -163,30 +167,9 @@
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
-            this.panel2.Controls.Add(this.mainLabel);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(586, 82);
-            this.panel2.TabIndex = 0;
-            // 
-            // mainLabel
-            // 
-            this.mainLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLabel.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainLabel.Location = new System.Drawing.Point(0, 0);
-            this.mainLabel.Name = "mainLabel";
-            this.mainLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mainLabel.Size = new System.Drawing.Size(586, 82);
-            this.mainLabel.TabIndex = 0;
-            this.mainLabel.Text = "Data selecting";
-            this.mainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // selectButton
             // 
-            this.selectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.selectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.selectButton.FlatAppearance.BorderSize = 0;
             this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -197,6 +180,26 @@
             this.selectButton.Text = "Select";
             this.selectButton.UseVisualStyleBackColor = false;
             this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
+            this.panel2.Controls.Add(this.mainLabel);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(586, 82);
+            this.panel2.TabIndex = 0;
+            // 
+            // mainLabel
+            // 
+            this.mainLabel.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainLabel.Location = new System.Drawing.Point(0, 0);
+            this.mainLabel.Name = "mainLabel";
+            this.mainLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.mainLabel.Size = new System.Drawing.Size(586, 82);
+            this.mainLabel.TabIndex = 0;
+            this.mainLabel.Text = "Data selecting";
+            this.mainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SelectForm
             // 
@@ -209,6 +212,7 @@
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

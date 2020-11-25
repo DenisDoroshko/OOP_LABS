@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.mainLabel = new System.Windows.Forms.Label();
             this.EditShowbutton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.multipleButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.mainLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(143)))), ((int)(((byte)(174)))));
             this.panel1.Controls.Add(this.EditShowbutton);
             this.panel1.Controls.Add(this.exitButton);
             this.panel1.Controls.Add(this.multipleButton);
@@ -52,30 +52,9 @@
             this.panel1.Size = new System.Drawing.Size(586, 463);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
-            this.panel2.Controls.Add(this.mainLabel);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(586, 82);
-            this.panel2.TabIndex = 0;
-            // 
-            // mainLabel
-            // 
-            this.mainLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLabel.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainLabel.Location = new System.Drawing.Point(0, 0);
-            this.mainLabel.Name = "mainLabel";
-            this.mainLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mainLabel.Size = new System.Drawing.Size(586, 82);
-            this.mainLabel.TabIndex = 0;
-            this.mainLabel.Text = "Work with vectors";
-            this.mainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // EditShowbutton
             // 
-            this.EditShowbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.EditShowbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.EditShowbutton.FlatAppearance.BorderSize = 0;
             this.EditShowbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditShowbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -89,7 +68,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.exitButton.FlatAppearance.BorderSize = 0;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -103,7 +82,7 @@
             // 
             // multipleButton
             // 
-            this.multipleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.multipleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.multipleButton.FlatAppearance.BorderSize = 0;
             this.multipleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.multipleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -117,7 +96,7 @@
             // 
             // addButton
             // 
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.addButton.FlatAppearance.BorderSize = 0;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -128,6 +107,27 @@
             this.addButton.Text = "Add vector";
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(78)))));
+            this.panel2.Controls.Add(this.mainLabel);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(586, 82);
+            this.panel2.TabIndex = 0;
+            // 
+            // mainLabel
+            // 
+            this.mainLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
+            this.mainLabel.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainLabel.Location = new System.Drawing.Point(0, 0);
+            this.mainLabel.Name = "mainLabel";
+            this.mainLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.mainLabel.Size = new System.Drawing.Size(586, 82);
+            this.mainLabel.TabIndex = 0;
+            this.mainLabel.Text = "Work with vectors";
+            this.mainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 

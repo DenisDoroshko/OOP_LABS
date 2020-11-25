@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(143)))), ((int)(((byte)(174)))));
             this.panel1.Controls.Add(this.yLabel);
             this.panel1.Controls.Add(this.zLabel);
             this.panel1.Controls.Add(this.xLabel);
@@ -90,31 +90,34 @@
             // 
             // yBox
             // 
+            this.yBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.yBox.Location = new System.Drawing.Point(177, 140);
-            this.yBox.MaxLength = 8;
+            this.yBox.MaxLength = 9;
             this.yBox.Name = "yBox";
             this.yBox.Size = new System.Drawing.Size(100, 20);
             this.yBox.TabIndex = 6;
             // 
             // zBox
             // 
+            this.zBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.zBox.Location = new System.Drawing.Point(177, 187);
-            this.zBox.MaxLength = 8;
+            this.zBox.MaxLength = 9;
             this.zBox.Name = "zBox";
             this.zBox.Size = new System.Drawing.Size(100, 20);
             this.zBox.TabIndex = 5;
             // 
             // xBox
             // 
+            this.xBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.xBox.Location = new System.Drawing.Point(177, 95);
-            this.xBox.MaxLength = 8;
+            this.xBox.MaxLength = 9;
             this.xBox.Name = "xBox";
             this.xBox.Size = new System.Drawing.Size(100, 20);
             this.xBox.TabIndex = 4;
             // 
             // editButton
             // 
-            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(237)))));
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.editButton.FlatAppearance.BorderSize = 0;
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -137,6 +140,7 @@
             // 
             // mainLabel
             // 
+            this.mainLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(229)))), ((int)(((byte)(215)))));
             this.mainLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLabel.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainLabel.Location = new System.Drawing.Point(0, 0);
