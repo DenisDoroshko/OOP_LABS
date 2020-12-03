@@ -12,7 +12,7 @@ namespace Vectors
     public class Vector
     {
         /// <summary>
-        /// Initializes an instance of the class
+        /// Initializes an instance of the Vector class
         /// </summary>
         /// <param name="coordinateX">X-coordinate of the vector</param>
         /// <param name="coordinateY">Y-coordinate of the vector</param>
